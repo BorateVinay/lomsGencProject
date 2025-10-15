@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<div th:fragment="sidebar">
+    <div class="sidebar border-end">
+        <div class="p-3">
+            <h5 class="text-muted">Navigation</h5>
+        </div>
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link" th:classappend="${#httpServletRequest.requestURI == '/dashboard' ? 'active' : ''}"
+                   href="/dashboard">
+                    <i class="bi bi-speedometer2"></i> Dashboard
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:classappend="${#httpServletRequest.requestURI.startsWith('/customers') ? 'active' : ''}"
+                   href="/customers">
+                    <i class="bi bi-people"></i> Customer Management
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:classappend="${#httpServletRequest.requestURI.startsWith('/applications') ? 'active' : ''}"
+                   href="/applications">
+                    <i class="bi bi-file-earmark-text"></i> Loan Applications
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:classappend="${#httpServletRequest.requestURI.startsWith('/credit') ? 'active' : ''}"
+                   href="/credit-evaluation">
+                    <i class="bi bi-graph-up"></i> Credit Evaluation
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:classappend="${#httpServletRequest.requestURI.startsWith('/disbursal') ? 'active' : ''}"
+                   href="/disbursal">
+                    <i class="bi bi-cash-coin"></i> Loan Disbursal
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:classappend="${#httpServletRequest.requestURI.startsWith('/repayment') ? 'active' : ''}"
+                   href="/repayment">
+                    <i class="bi bi-arrow-repeat"></i> Repayment Tracking
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

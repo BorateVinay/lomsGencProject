@@ -1,0 +1,88 @@
+<!-- <!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+</head>
+<body>
+<div>
+  <h2>Login</h2>
+  <form th:action="@{/login}" method="post" th:object="${user}">
+    <input type="text" placeholder="phone number" th:field="*{phone}">
+    <br>
+    <input type="password" placeholder="password" th:field="*{password}">
+    <br>
+    <button type="submit">Login</button>
+    <br>
+  </form>
+  <p th:text="${error}"></p>
+  <p th:text="${message}"></p>
+  <form th:action="@{/register}" method="get">
+    <p>Don't have an Account? <button type="submit">Register here</button></p>
+  </form>
+</div>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head th:replace="fragments/header :: head(title='Login')">
+</head>
+<body class="bg-light">
+    <div class="container">
+        <div class="row justify-content-center min-vh-100 align-items-center">
+            <div class="col-md-6 col-lg-4">
+                <div class="card shadow">
+                    <div class="card-body p-5">
+                        <div class="text-center mb-4">
+                            <i class="bi bi-bank display-4 text-primary"></i>
+                            <h2 class="mt-2">LOMS Login</h2>
+                            <p class="text-muted">Access your account</p>
+                        </div>
+                        
+                        <form th:action="@{/login}" method="post" class="needs-validation" novalidate>
+                            <div th:if="${param.error}" class="alert alert-danger">
+                                Invalid phone number or password.
+                            </div>
+                            <div th:if="${param.logout}" class="alert alert-success">
+                                You have been logged out successfully.
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="text" class="form-control" id="phone" name="phone"
+                                       placeholder="Enter your phone number" required>
+                                <div class="invalid-feedback">
+                                    Please enter your phone number.
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password" name="password"
+                                       placeholder="Enter your password" required>
+                                <div class="invalid-feedback">
+                                    Please enter your password.
+                                </div>
+                            </div>
+                            
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary btn-lg">Sign In</button>
+                            </div>
+                        </form>
+                        
+                        <div class="text-center mt-3">
+                            <p class="mb-0">Don't have an account?
+                                <a th:href="@{/register}" class="text-decoration-none">Register here</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<div th:replace="fragments/footer :: footer"></div>
+</body>
+</html>
