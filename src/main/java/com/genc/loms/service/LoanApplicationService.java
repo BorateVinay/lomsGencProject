@@ -44,7 +44,7 @@ public class LoanApplicationService {
 //		
 //	}
 	
-	 @Transactional
+//	 @Transactional
 	    public LoanApplication submitLoanApplication(int customerId, LoanApplication loanApplicationDetails) {
 	        
 	        // 1. Fetch the managed Customer entity to link with the application

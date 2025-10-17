@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import com.genc.loms.entity.User;
 import com.genc.loms.service.UserService;
 
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
 
 @Controller
@@ -37,13 +39,16 @@ public class UserController {
     }
     
     @PostMapping("/login")
-    public ResponseEntity<Map<String,Object>> login(@RequestBody User loginUser){
+    public ResponseEntity<Map<String,Object>> login(@RequestBody User loginUser,HttpServletRequest request){
     	Map<String,Object> response = new HashMap<String, Object>();
     	User userdata = userService.authenticate(loginUser.getUserName(),loginUser.getPassword());
     	if(userdata == null) {
     		response.put("Message","wrong Credential");
     		return new ResponseEntity<>(response, HttpStatus.UNAUTHORIZED); 
     	}else {
+    		HttpSession session = request.getSession();
+    		session.setAttribute("employeeName", userdata.getName());
+    		
     		response.put("Message","UserLogin Successfully");
     		response.put("user", userdata);
     	}

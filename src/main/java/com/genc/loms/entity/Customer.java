@@ -2,6 +2,8 @@ package com.genc.loms.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
 
 import java.util.List;
 
@@ -14,14 +16,21 @@ public class Customer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int customerId;
     
+    @Size(min = 2,max = 30 , message = "Name Between 2 - 30 cgaracter")
+    @Pattern(regexp = "^[A-Za-z ]+$" , message = "Name Should contain Alphabets")
     private String name;
     
-    @NotBlank
+    @NotBlank(message = "Email cannot be Blank")
     private String email;
-    @NotBlank
+    
+    @NotBlank(message = "Password cannot be blank")
     private String password;
     
+    @Pattern(regexp = "\\d+" , message = "Must Be Number")
+    @Size(min = 10,max = 10 , message = "Must Be 10 digit")
     private String phone;
+    
+    @Lob
     private String address;
     
 

@@ -262,7 +262,7 @@
 
         const employeeLoginForm = document.getElementById('employee-login-form');
         const loginUrl = '/login';
-        const homePageUrl = 'Home.html';
+        const homePageUrl = 'employeeHome.html';
 
         employeeLoginForm.addEventListener('submit', async function (e) {
             e.preventDefault();
@@ -330,7 +330,7 @@
 
         const customerLoginForm = document.getElementById('customer-login-form');
         let loginUrl2 = '/customer/login';
-        //const homePageUrl = 'Home.html'; // Assuming you want to redirect to Home.html upon success
+        const homePageUrl2 = 'customerHome.html'; // Assuming you want to redirect to Home.html upon success
 
         customerLoginForm.addEventListener('submit', async function (e) {
             e.preventDefault(); // Prevent default form submission
@@ -368,7 +368,7 @@
                     // Example: localStorage.setItem('customerData', JSON.stringify(result.customer)); 
 
                     // 5. Redirect to Home.html
-                    window.location.href = homePageUrl;
+                    window.location.href = homePageUrl2;
                 } else if (response.status === 401) { // Specifically handle UNAUTHORIZED status from your controller
                     console.error('Login Failed - Wrong Credential:', result.Message);
                     alert(`Login failed: ${result.Message || 'Wrong credentials.'}`);

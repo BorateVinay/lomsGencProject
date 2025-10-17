@@ -16,8 +16,7 @@ import java.util.List;
 @SpringBootApplication
 public class LomsApplication /*implements CommandLineRunner*/ {
 
-	@Autowired
-	CustomerService customerService;
+	
 
 	public static void main(String[] args) {
 		SpringApplication.run(LomsApplication.class, args);

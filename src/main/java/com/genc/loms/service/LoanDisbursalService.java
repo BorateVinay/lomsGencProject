@@ -12,6 +12,9 @@ import com.genc.loms.entity.LoanDisbursal;
 import com.genc.loms.repository.LoanApplicationRepo;
 import com.genc.loms.repository.LoanDisbursalRepo;
 
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
+
 @Service
 public class LoanDisbursalService {
 	

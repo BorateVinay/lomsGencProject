@@ -43,7 +43,7 @@ public class CustomerController {
 	}
 	
 	@PostMapping("/login")
-	public ResponseEntity<Map<String,Object>> login(@Valid @RequestBody Customer loginCustomer){
+	public ResponseEntity<Map<String,Object>> login(@Valid @RequestBody Customer loginCustomer,HttpServletRequest request){
 		
 		Map<String,Object> response = new HashMap<String, Object>();
 		Customer customerData = customerService.authenticateCustomer(loginCustomer.getEmail(),loginCustomer.getPassword());
@@ -53,6 +53,12 @@ public class CustomerController {
 		}else {
 			response.put("Message","Customer Login Successfully");
 			response.put("customer", customerData);
+			
+			HttpSession session = request.getSession();
+			session.setAttribute("customerId",customerData.getCustomerId());
+			
+		
+			
 //			HttpSession session, HttpServletRequest request
 //			session.setAttribute("name", customerData.getName());
 //			session.getAttribute("name");
