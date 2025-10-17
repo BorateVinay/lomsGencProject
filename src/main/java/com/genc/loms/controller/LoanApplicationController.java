@@ -88,5 +88,21 @@ public class LoanApplicationController{
 	        
 	        return new ResponseEntity<>(response, HttpStatus.OK);    
 	    }
+	 
+	 @GetMapping("/getCustomerLoans")
+	 public ResponseEntity<Map<String,Object>> getcustomerLoans(HttpServletRequest request){
+		 Map<String,Object> response = new HashMap<String, Object>();
+		 HttpSession session = request.getSession();
+		 try {
+			 int id = (int)session.getAttribute("customerId");
+			
+			 List<LoanApplication> applications = loanApplicationService.getCustomerLoanApplications(id);
+			 response.put("Message", applications);
+		 }
+		 catch(Exception e){
+			 response.put("Message", e.getMessage());
+		 }
+		 return new ResponseEntity<Map<String,Object>>(response,HttpStatus.OK);
+	 }
 
 }

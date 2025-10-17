@@ -1,6 +1,7 @@
 package com.genc.loms.service;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -60,6 +61,11 @@ public class LoanApplicationService {
 	        
 	        // 4. Save the new LoanApplication
 	        return repo.save(loanApplicationDetails);
+	    }
+	    
+	    public List<LoanApplication> getCustomerLoanApplications(int customerId){
+	    	List<LoanApplication> application = repo.findByCustomerCustomerId(customerId);
+	    	return application;
 	    }
 	
 	
