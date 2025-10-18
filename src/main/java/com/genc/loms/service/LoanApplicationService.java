@@ -1,7 +1,6 @@
 package com.genc.loms.service;
 
 import java.util.List;
-import java.util.Map;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,15 +8,12 @@ import org.springframework.stereotype.Service;
 
 import com.genc.loms.entity.Customer;
 import com.genc.loms.entity.LoanApplication;
-import com.genc.loms.entity.LoanApplication.Status;
 import com.genc.loms.repository.CustomerRepo;
 import com.genc.loms.repository.LoanApplicationRepo;
 
-import jakarta.transaction.Transactional;
-
 @Service
 public class LoanApplicationService {
-	
+		
 	@Autowired
 	LoanApplicationRepo repo;
 	
@@ -66,6 +62,12 @@ public class LoanApplicationService {
 	    public List<LoanApplication> getCustomerLoanApplications(int customerId){
 	    	List<LoanApplication> application = repo.findByCustomerCustomerId(customerId);
 	    	return application;
+	    }
+	    
+	    
+	    public List<LoanApplication> getPendingLoanApplications(){
+	    	List<LoanApplication> applications = repo.findByStatus(LoanApplication.Status.PENDING);
+	    	return applications;
 	    }
 	
 	

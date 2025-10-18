@@ -39,24 +39,7 @@ public class LoanApplicationController{
 		return loanApplicationService.getAllLoanApplication();
 	}
 	
-//	@GetMapping("/getPendingApplication")
-//	List<LoanApplication> getPendingLoanApplications(){
-//		return loanApplicationService.getPen
-//	}
-	
-//	@PostMapping("/submitloanapplication")
-//	public ResponseEntity<Map<String,Object>> submitApplication(@RequestBody LoanApplication loanApplication,@RequestBody Customer customer){
-////		Update the Phone Address
-//		customerService.updatePhoneAddressById(customer);
-////		Saving the LoanApplication
-//		loanApplicationService.submitLoanApplication(customer,loanApplication);
-//		
-//		Map<String,Object> response = new HashMap<String, Object>();
-//		response.put("Message",customer);
-//		response.put("Message", loanApplication);
-//	 return new ResponseEntity<Map<String,Object>>(response,HttpStatus.OK);	
-//	}
-	
+
 	 @PostMapping("/submitloanapplication")
 	    public ResponseEntity<Map<String,Object>> submitApplication(
 	        @RequestBody LoanApplicationSubmissionDTO submissionDTO,HttpServletRequest request) {
@@ -103,6 +86,18 @@ public class LoanApplicationController{
 			 response.put("Message", e.getMessage());
 		 }
 		 return new ResponseEntity<Map<String,Object>>(response,HttpStatus.OK);
+	 }
+	 
+	 @GetMapping("/getPendingLoanApplication")
+	 public ResponseEntity<Map<String,Object>> getPendingLoanApplications(){
+		 Map<String,Object> response = new HashMap<String, Object>();
+		 try {
+			 List<LoanApplication> applications = loanApplicationService.getPendingLoanApplications();
+			 response.put("Message", applications);
+		} catch (Exception e) {
+			 response.put("Message",e.getMessage());
+		}
+		return new ResponseEntity<Map<String,Object>>(response,HttpStatus.OK);
 	 }
 
 }

@@ -26,14 +26,14 @@ public class LoanDisbursalService {
 	
 	
 	@Transactional
-	public void approveLoan(LoanApplication loanApplication){
-		LoanDisbursal obj = new LoanDisbursal();
-		obj.setApplicationId(loanApplication);
-		obj.setApprovedBy("Rahul");
-		obj.setDisbursalAmount(4500.0);
-		obj.setDisbursalDate(new Date());
+	public void approveLoan(LoanApplication loanApplication ,LoanDisbursal loanDisbursal){
+		 
+		loanDisbursal.setApplicationId(loanApplication);
+		//loanDisbursal.setApprovedBy("Rahul");
+		loanDisbursal.setDisbursalAmount(4500.0);
+		loanDisbursal.setDisbursalDate(new Date());
 		
-		repo.save(obj);
+		repo.save(loanDisbursal);
 	
 //		Update Status
 		loanApplication.setStatus(LoanApplication.Status.APPROVED);
