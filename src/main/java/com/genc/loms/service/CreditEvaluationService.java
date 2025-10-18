@@ -43,8 +43,23 @@ public class CreditEvaluationService {
         }
 
         finalScore = Math.max(300, Math.min(850, finalScore));
+        
+        Optional<CreditScore> latestScore = creditScoreRepo.findFirstByCustomerCustomerIdOrderByEvaluationDateDesc(customerId);
+        CreditScore creditScore;
+        
+        if(latestScore.isPresent()) {
+        	// 2. If a record exists, update the existing entity (no new row created)
+            creditScore = latestScore.get();
+            creditScore.setCreditScore(finalScore);
+            // Crucial: Update the evaluation date to track when the update happened
+            creditScore.setEvaluationDate(LocalDate.now());
+        }
+        else {
+            // 3. If no record exists, create a brand new entity
+            creditScore = new CreditScore(customer, finalScore);
+        }
 
-        CreditScore creditScore = new CreditScore(customer, finalScore);
+        
         return creditScoreRepo.save(creditScore);
     }
 
