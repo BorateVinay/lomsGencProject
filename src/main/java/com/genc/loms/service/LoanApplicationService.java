@@ -33,6 +33,13 @@ public class LoanApplicationService {
 		return applications;
 	}
 	
+	
+	public double getLoanAmount(int applicationId) {
+		 // ⭐ UPDATED LOGIC: Use the new method and handle the Optional.
+        return repo.findAmountRequestedByApplicationId(applicationId)
+                   .orElseThrow(() -> new RuntimeException("Loan amount not found for ID: " + applicationId));
+	}
+	
 //	public String submitLoanApplication(Customer customer,LoanApplication loanApplication) {
 //		cusRepo.save(customer);
 //		loanApplication.setStatus(Status.PENDING);

@@ -113,11 +113,11 @@ public class Customer {
 		this.loanApplications = loanApplications;
 	}
 
-	@Override
-	public String toString() {
-		return "Customer [customerId=" + customerId + ", name=" + name + ", email=" + email + ", password=" + password
-				+ ", phone=" + phone + ", address=" + address + ", loanApplications=" + loanApplications + "]";
-	}
+//	@Override
+//	public String toString() {
+//		return "Customer [customerId=" + customerId + ", name=" + name + ", email=" + email + ", password=" + password
+//				+ ", phone=" + phone + ", address=" + address + ", loanApplications=" + loanApplications + "]";
+//	}
 
   
 }

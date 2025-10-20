@@ -2,136 +2,156 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Login & Registration</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .form-container {
-            max-width: 400px;
-            margin: 50px auto;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Login & Registration</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+<style>
+.form-container {
+	max-width: 400px;
+	margin: 50px auto;
+	padding: 20px;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+</style>
 </head>
 
 <body>
 
-    <div class="container">
-        <div class="form-container">
-            <h2 class="text-center mb-4" id="form-title">Login</h2>
+	<div class="container">
+		<div class="form-container">
+			<h2 class="text-center mb-4" id="form-title">Login</h2>
 
-            <div class="d-grid gap-2 mb-4">
-                <div class="btn-group" role="group" aria-label="User Type Toggle">
-                    <button type="button" class="btn btn-primary active" id="toggle-customer">Customer</button>
-                    <button type="button" class="btn btn-outline-primary" id="toggle-employee">Employee</button>
-                </div>
-            </div>
+			<div class="d-grid gap-2 mb-4">
+				<div class="btn-group" role="group" aria-label="User Type Toggle">
+					<button type="button" class="btn btn-primary active"
+						id="toggle-customer">Customer</button>
+					<button type="button" class="btn btn-outline-primary"
+						id="toggle-employee">Employee</button>
+				</div>
+			</div>
 
-            <div id="login-section">
-                <form id="customer-login-form">
-                    <h5 class="text-center mb-3">Customer Login</h5>
-                    <div class="mb-3">
-                        <label for="customerEmailLogin" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="customerEmailLogin" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="customerPasswordLogin" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="customerPasswordLogin" required>
-                    </div>
-                    <button type="submit" class="btn btn-success w-100">Customer Login</button>
-                </form>
+			<div id="login-section">
+				<form id="customer-login-form">
+					<h5 class="text-center mb-3">Customer Login</h5>
+					<div class="mb-3">
+						<label for="customerEmailLogin" class="form-label">Email
+							address</label> <input type="email" class="form-control"
+							id="customerEmailLogin" required>
+					</div>
+					<div class="mb-3">
+						<label for="customerPasswordLogin" class="form-label">Password</label>
+						<input type="password" class="form-control"
+							id="customerPasswordLogin" required>
+					</div>
+					<button type="submit" class="btn btn-success w-100">Customer
+						Login</button>
+				</form>
 
-                <form id="employee-login-form" class="d-none">
-                    <h5 class="text-center mb-3">Employee Login</h5>
-                    <div class="mb-3">
-                        <label for="employeeIDLogin" class="form-label">Employee ID (Username)</label>
-                        <input type="text" class="form-control" id="employeeIDLogin" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="employeePasswordLogin" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="employeePasswordLogin" required>
-                    </div>
-                    <button type="submit" class="btn btn-success w-100">Employee Login</button>
-                </form>
+				<form id="employee-login-form" class="d-none">
+					<h5 class="text-center mb-3">Employee Login</h5>
+					<div class="mb-3">
+						<label for="employeeIDLogin" class="form-label">Employee
+							ID (Username)</label> <input type="text" class="form-control"
+							id="employeeIDLogin" required>
+					</div>
+					<div class="mb-3">
+						<label for="employeePasswordLogin" class="form-label">Password</label>
+						<input type="password" class="form-control"
+							id="employeePasswordLogin" required>
+					</div>
+					<button type="submit" class="btn btn-success w-100">Employee
+						Login</button>
+				</form>
 
-                <p class="text-center mt-3">
-                    Don't have an account? <a href="#" id="show-register">Register here</a>
-                </p>
-            </div>
+				<p class="text-center mt-3">
+					Don't have an account? <a href="#" id="show-register">Register
+						here</a>
+				</p>
+			</div>
 
-            <div id="register-section" class="d-none">
-                <form id="customer-register-form">
-                    <h5 class="text-center mb-3">Customer Registration</h5>
-                    <div class="mb-3">
-                        <label for="customerNameRegister" class="form-label">Full Name</label>
-                        <input type="text" class="form-control" id="customerNameRegister" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="customerEmailRegister" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="customerEmailRegister" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="customerPasswordRegister" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="customerPasswordRegister" required>
-                    </div>
-                    <button type="submit" class="btn btn-info w-100">Register as Customer</button>
-                </form>
+			<div id="register-section" class="d-none">
+				<form id="customer-register-form">
+					<h5 class="text-center mb-3">Customer Registration</h5>
+					<div class="mb-3">
+						<label for="customerNameRegister" class="form-label">Full
+							Name</label> <input type="text" class="form-control"
+							id="customerNameRegister" required>
+					</div>
+					<div class="mb-3">
+						<label for="customerEmailRegister" class="form-label">Email
+							address</label> <input type="email" class="form-control"
+							id="customerEmailRegister" required>
+					</div>
+					<div class="mb-3">
+						<label for="customerPasswordRegister" class="form-label">Password</label>
+						<input type="password" class="form-control"
+							id="customerPasswordRegister" required>
+					</div>
+					<button type="submit" class="btn btn-info w-100">Register
+						as Customer</button>
+				</form>
 
-                <form id="employee-register-form">
-                    <h5 class="text-center mb-3">Employee Registration</h5>
-                    <div class="mb-3">
-                        <label for="employeeNameRegister" class="form-label">Full Name</label>
-                        <input type="text" class="form-control" id="employeeNameRegister" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="employeeIDRegister" class="form-label">Employee ID (Username)</label>
-                        <input type="text" class="form-control" id="employeeIDRegister" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="employeePasswordRegister" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="employeePasswordRegister" required>
-                    </div>
-                    <button type="submit" class="btn btn-info w-100">Register as Employee</button>
-                </form>
+				<form id="employee-register-form">
+					<h5 class="text-center mb-3">Employee Registration</h5>
+					<div class="mb-3">
+						<label for="employeeNameRegister" class="form-label">Full
+							Name</label> <input type="text" class="form-control"
+							id="employeeNameRegister" required>
+					</div>
+					<div class="mb-3">
+						<label for="employeeIDRegister" class="form-label">Employee
+							ID (Username)</label> <input type="text" class="form-control"
+							id="employeeIDRegister" required>
+					</div>
+					<div class="mb-3">
+						<label for="employeePasswordRegister" class="form-label">Password</label>
+						<input type="password" class="form-control"
+							id="employeePasswordRegister" required>
+					</div>
+					<button type="submit" class="btn btn-info w-100">Register
+						as Employee</button>
+				</form>
 
-                <p class="text-center mt-3">
-                    Already have an account? <a href="#" id="show-login">Login here</a>
-                </p>
-            </div>
-        </div>
-    </div>
+				<p class="text-center mt-3">
+					Already have an account? <a href="#" id="show-login">Login here</a>
+				</p>
+			</div>
+		</div>
+	</div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script>
+	<script>
         // --- Utility Functions for Toggling Forms ---
-
+ 
         /**
-         * Toggles visibility between Employee and Customer forms 
+         * Toggles visibility between Employee and Customer forms
          * within the current active section (Login or Register).
          * @param {string} userType - 'customer' or 'employee'
          */
         function toggleUserForm(userType) {
             let isCustomer;
-
+ 
             // Use if...else statement to determine user type (as requested)
             if (userType === 'customer') {
                 isCustomer = true;
             } else {
                 isCustomer = false; // userType is 'employee'
             }
-
+ 
             // Find the currently active section (Login or Register)
             const activeSectionId = document.getElementById('login-section').classList.contains('d-none') ? 'register' : 'login';
-
+ 
             // Get the specific form elements for the active section
             const customerForm = document.getElementById(`customer-${activeSectionId}-form`);
             const employeeForm = document.getElementById(`employee-${activeSectionId}-form`);
-
+ 
             // Update form visibility using the isCustomer flag
             if (isCustomer) {
                 customerForm.classList.remove('d-none');
@@ -140,26 +160,26 @@
                 customerForm.classList.add('d-none');
                 employeeForm.classList.remove('d-none');
             }
-
+ 
             // --- Update Toggle Button styles ---
             const toggleCustomerBtn = document.getElementById('toggle-customer');
             const toggleEmployeeBtn = document.getElementById('toggle-employee');
-
+ 
             if (isCustomer) {
                 toggleCustomerBtn.classList.add('active', 'btn-primary');
                 toggleCustomerBtn.classList.remove('btn-outline-primary');
-
+ 
                 toggleEmployeeBtn.classList.add('btn-outline-primary');
                 toggleEmployeeBtn.classList.remove('active', 'btn-primary');
             } else {
                 toggleEmployeeBtn.classList.add('active', 'btn-primary');
                 toggleEmployeeBtn.classList.remove('btn-outline-primary');
-
+ 
                 toggleCustomerBtn.classList.add('btn-outline-primary');
                 toggleCustomerBtn.classList.remove('active', 'btn-primary');
             }
         }
-
+ 
         /**
          * Toggles visibility between the Login and Register sections.
          * @param {string} section - 'login' or 'register'
@@ -168,7 +188,7 @@
             const loginSection = document.getElementById('login-section');
             const registerSection = document.getElementById('register-section');
             const formTitle = document.getElementById('form-title');
-
+ 
             if (section === 'login') {
                 loginSection.classList.remove('d-none');
                 registerSection.classList.add('d-none');
@@ -178,42 +198,42 @@
                 registerSection.classList.remove('d-none');
                 formTitle.textContent = 'Register';
             }
-
+ 
             // Ensure the correct (Customer/Employee) form is shown when switching sections
             const isCustomerActive = document.getElementById('toggle-customer').classList.contains('active');
-
+ 
             if (isCustomerActive) {
                 toggleUserForm('customer');
             } else {
                 toggleUserForm('employee');
             }
         }
-
+ 
         // --- Event Listeners ---
-
+ 
         // User Type Toggles (Customer/Employee)
         document.getElementById('toggle-customer').addEventListener('click', () => toggleUserForm('customer'));
         document.getElementById('toggle-employee').addEventListener('click', () => toggleUserForm('employee'));
-
+ 
         // Main Section Toggles (Login/Register)
         document.getElementById('show-register').addEventListener('click', (e) => {
             e.preventDefault();
             toggleMainSection('register');
         });
-
+ 
         document.getElementById('show-login').addEventListener('click', (e) => {
             e.preventDefault();
             toggleMainSection('login');
         });
-
+ 
         // ------------------------------------------------------------------------------------------------
-
+ 
         const employeeRegisterForm = document.getElementById('employee-register-form');
         const registerUrl = '/register';
-
+ 
         employeeRegisterForm.addEventListener('submit', async function (e) {
             e.preventDefault(); // Prevent default form submission and page reload
-
+ 
             // 1. Get form data
             // Full Name maps to 'name'
             const fullName = document.getElementById('employeeNameRegister').value;
@@ -221,14 +241,14 @@
             const employeeUserName = document.getElementById('employeeIDRegister').value;
             // Password maps to 'password'
             const password = document.getElementById('employeePasswordRegister').value;
-
+ 
             // 2. Prepare the data payload, matching your User entity fields: name, userName, password
             const userData = {
                 name: fullName,
                 userName: employeeUserName,
                 password: password
             };
-
+ 
             try {
                 // 3. Send data to the backend API
                 const response = await fetch(registerUrl, {
@@ -238,7 +258,7 @@
                     },
                     body: JSON.stringify(userData) // Convert the JavaScript object to a JSON string
                 });
-
+ 
                 // 4. Handle the response
                 if (response.ok) { // Status code 200-299
                     const result = await response.json();
@@ -256,52 +276,52 @@
                 alert('An error occurred. Please check the server connection.');
             }
         });
-
+ 
         //-----------------------------------------------------------------------------------------------------//
-
-
+ 
+ 
         const employeeLoginForm = document.getElementById('employee-login-form');
         const loginUrl = '/login';
-        const homePageUrl = 'employeeHome.html';
-
+        const homePageUrl = 'employeeAdmin.html';
+ 
         employeeLoginForm.addEventListener('submit', async function (e) {
             e.preventDefault();
-
+ 
             // 1. Get form data
             const employeeUserName = document.getElementById('employeeIDLogin').value;
             const password = document.getElementById('employeePasswordLogin').value;
-
+ 
             // 2. Prepare the data payload, matching the exact keys required by your backend
             const loginData = {
                 userName: employeeUserName,
                 password: password
             };
-
+ 
             console.log("Sending login request to:", loginUrl);
             console.log("Payload:", loginData);
-
+ 
             try {
                 // 3. Send data to the backend API
                 const response = await fetch(loginUrl, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
-                        // IMPORTANT: If you are running into CORS issues, 
-                        // ensure your backend is configured to accept requests from the origin 
+                        // IMPORTANT: If you are running into CORS issues,
+                        // ensure your backend is configured to accept requests from the origin
                         // where this HTML file is hosted (e.g., file:// or another domain).
                     },
                     body: JSON.stringify(loginData)
                 });
-
+ 
                 // Log status for debugging
                 console.log("Response status:", response.status);
-
+ 
                 // 4. Handle the response
                 if (response.ok) { // Status code 200-299
                     const result = await response.text(); // Use text() first to see the exact response if JSON fails
                     console.log('Login Successful - Response Body:', result);
                     alert('Login successful! Redirecting to home page.');
-
+ 
                     // 5. Redirect to Home.html
                     window.location.href = homePageUrl;
                 } else {
@@ -325,28 +345,28 @@
                 alert('A network error occurred. Check the server URL and CORS configuration.');
             }
         });
-
+ 
         // --------------------------------------------------------------------------------------------------------//
-
+ 
         const customerLoginForm = document.getElementById('customer-login-form');
         let loginUrl2 = '/customer/login';
         const homePageUrl2 = 'Home.html'; // Assuming you want to redirect to Home.html upon success
-
+ 
         customerLoginForm.addEventListener('submit', async function (e) {
             e.preventDefault(); // Prevent default form submission
-
+ 
             // 1. Get form data
             const email = document.getElementById('customerEmailLogin').value;
             const password = document.getElementById('customerPasswordLogin').value;
-
+ 
             // 2. Prepare the data payload, matching your expected Customer entity fields: email, password
             const loginData = {
                 email: email,
                 password: password
             };
-
+ 
             console.log("Attempting Customer Login with:", loginData);
-
+ 
             try {
                 // 3. Send data to the backend API
                 const response = await fetch(loginUrl2, {
@@ -356,17 +376,17 @@
                     },
                     body: JSON.stringify(loginData)
                 });
-
+ 
                 // 4. Handle the response based on your controller's status codes (200 OK or 401 UNAUTHORIZED)
                 const result = await response.json();
-
+ 
                 if (response.ok) { // Checks for status codes 200-299, specifically 200 OK in your case
                     console.log('Login Successful:', result);
                     alert('Customer Login Successfully! Redirecting...');
-
+ 
                     // You might want to save customer data/token here before redirecting
-                    // Example: localStorage.setItem('customerData', JSON.stringify(result.customer)); 
-
+                    // Example: localStorage.setItem('customerData', JSON.stringify(result.customer));
+ 
                     // 5. Redirect to Home.html
                     window.location.href = homePageUrl2;
                 } else if (response.status === 401) { // Specifically handle UNAUTHORIZED status from your controller
@@ -383,30 +403,30 @@
                 alert('A network error occurred. Check the server URL and CORS configuration.');
             }
         });
-
+ 
         //-----------------------------------------------------------------------------------------------------//
-
+ 
         
     const customerRegisterForm = document.getElementById('customer-register-form');
-    const registerUrl3 = '/customer/register'; 
-
+    const registerUrl3 = '/customer/register';
+ 
     customerRegisterForm.addEventListener('submit', async function(e) {
         e.preventDefault(); // Stop the default form submission
-
+ 
         // 1. Get form data
-        const fullName = document.getElementById('customerNameRegister').value; 
-        const email = document.getElementById('customerEmailRegister').value; 
-        const password = document.getElementById('customerPasswordRegister').value; 
-
+        const fullName = document.getElementById('customerNameRegister').value;
+        const email = document.getElementById('customerEmailRegister').value;
+        const password = document.getElementById('customerPasswordRegister').value;
+ 
         // 2. Prepare the data payload, matching your expected Customer entity fields
         const registrationData = {
-            name: fullName, 
-            email: email, 
+            name: fullName,
+            email: email,
             password: password
         };
         
         console.log("Sending registration request with:", registrationData);
-
+ 
         try {
             // 3. Send data to the backend API
             const response = await fetch(registerUrl3, {
@@ -416,9 +436,9 @@
                 },
                 body: JSON.stringify(registrationData) // Convert the object to a JSON string
             });
-
+ 
             // 4. Handle the response
-            const result = await response.json(); 
+            const result = await response.json();
             
             if (response.status === 201) { // Checks for the HttpStatus.CREATED from your controller
                 console.log('Registration Successful:', result);
@@ -426,7 +446,7 @@
                 // Optionally clear the form
                 customerRegisterForm.reset();
             } else if (response.ok) {
-                // This block handles the path where your controller returns 200 OK 
+                // This block handles the path where your controller returns 200 OK
                 // in the event of an error (response.put("Message",e.getMessage());)
                 console.error('Registration Failed (Server Response 200 with Error):', result.Message);
                 alert(`Registration failed: ${result.Message || 'An unexpected server error occurred.'}`);
@@ -441,10 +461,10 @@
             alert('A network error occurred. Check the server URL and CORS configuration.');
         }
     });
-
-
-
-
+ 
+ 
+ 
+ 
     </script>
 </body>
 

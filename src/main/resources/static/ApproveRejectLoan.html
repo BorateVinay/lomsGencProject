@@ -1,10 +1,9 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pending Loan Applications</title>
-    <!-- Load Bootstrap 5 CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <style>
         /* Custom styles for better aesthetics */
@@ -41,10 +40,8 @@
     <div class="container">
         <h1 class="mb-4 text-center text-primary">Loan Review Dashboard</h1>
 
-        <!-- Status Message Box (Replaces alert()) -->
         <div id="statusMessage" class="status-message alert" role="alert">
-            <!-- Message content will be inserted here -->
-        </div>
+            </div>
 
         <div class="card p-4">
             <h2 class="card-title mb-3">Pending Applications</h2>
@@ -69,24 +66,20 @@
                         </tr>
                     </thead>
                     <tbody id="loanApplicationsBody">
-                        <!-- Loan rows will be injected here by JavaScript -->
-                    </tbody>
+                        </tbody>
                 </table>
             </div>
 
-            <!-- Message for when no loans are pending -->
             <div id="noLoansMessage" class="alert alert-info text-center mt-4" style="display: none;">
                 <p class="lead mb-0">No pending loan applications found.</p>
             </div>
 
-            <!-- Error Message Area -->
-             <div id="errorMessage" class="alert alert-danger text-center mt-4" style="display: none;">
+            <div id="errorMessage" class="alert alert-danger text-center mt-4" style="display: none;">
                 <p class="lead mb-0">Could not load loan applications.</p>
             </div>
         </div>
     </div>
 
-    <!-- Load Bootstrap 5 JS CDN (Optional, but good practice for components like dropdowns/modals) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 
     <script>
@@ -94,6 +87,8 @@
         const LOAN_API_URL = 'http://localhost:8082/getPendingLoanApplication';
         const APPROVE_API_BASE = 'http://localhost:8082/approveLoan'; 
         const REJECT_API_BASE = 'http://localhost:8082/reject'; 
+        // 🚨 NEW API ENDPOINT ADDED HERE FOR DUE DATE
+        const SET_DUEDATE_API_BASE = 'http://localhost:8082/set-DueDate'; 
 
         const loanApplicationsBody = document.getElementById('loanApplicationsBody');
         const loadingIndicator = document.getElementById('loadingIndicator');
@@ -123,7 +118,6 @@
          * @param {string} action - 'APPROVED' or 'REJECTED'.
          */
         async function handleAction(applicationId, action) {
-            // FIX: Explicitly call window.confirm() to prevent recursion error
             if (!window.confirm(`Are you sure you want to ${action === 'APPROVED' ? 'APPROVE' : 'REJECT'} loan ${applicationId}?`)) {
                 return;
             }
@@ -143,14 +137,35 @@
             }
 
             try {
-                // Use PUT method as specified by the user's controller
+                // 1. Call the Primary Action API (approveLoan - using PUT)
                 const response = await fetch(url, {
                     method: 'PUT', 
                     // No headers or body needed as ID is passed in the URL path
                 });
 
                 if (response.ok) {
-                    showStatusMessage(`Loan ${applicationId} successfully ${actionText}.`, 'success');
+                    
+                    // 2. 🚨 CONDITIONAL LOGIC: If APPROVED, call the set-DueDate API (using POST)
+                    if (action === 'APPROVED') {
+                        const dueDateUrl = `${SET_DUEDATE_API_BASE}/${applicationId}`;
+                        
+                        // New POST request for set-DueDate
+                        const dueDateResponse = await fetch(dueDateUrl, {
+                            method: 'POST', // Use POST method as requested
+                        });
+
+                        if (dueDateResponse.ok) {
+                            showStatusMessage(`Loan ${applicationId} successfully ${actionText} and Due Date set.`, 'success');
+                        } else {
+                             // Handle case where approval succeeded but set-DueDate failed
+                             console.warn(`Approval success, but Failed to set Due Date for ${applicationId}. Status: ${dueDateResponse.status}`);
+                             showStatusMessage(`Loan ${applicationId} approved, but failed to set Due Date.`, 'warning');
+                        }
+
+                    } else { // REJECTED case
+                        showStatusMessage(`Loan ${applicationId} successfully ${actionText}.`, 'success');
+                    }
+                    
                     // Remove the row from the table on success
                     const rowToRemove = document.getElementById(`loan-row-${applicationId}`);
                     if (rowToRemove) {
@@ -162,7 +177,7 @@
                         noLoansMessage.style.display = 'block';
                     }
                 } else {
-                    // This handles non-2xx responses
+                    // This handles non-2xx responses for the primary API
                     showStatusMessage(`Failed to ${actionText.toLowerCase()} loan ${applicationId}. Server responded with status ${response.status}.`, 'danger');
                 }
             } catch (error) {
@@ -261,10 +276,6 @@
 
         // Start the process when the page loads
         document.addEventListener('DOMContentLoaded', fetchLoans);
-
-        // NOTE: The redundant 'confirm' function wrapper has been removed to fix the recursion error.
-
     </script>
 </body>
 </html>
- 
