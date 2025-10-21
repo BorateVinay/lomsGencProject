@@ -81,6 +81,7 @@ public class LoanApplicationController{
 			
 			 List<LoanApplication> applications = loanApplicationService.getCustomerLoanApplications(id);
 			 response.put("Message", applications);
+			 response.put("Id", id);
 		 }
 		 catch(Exception e){
 			 response.put("Message", e.getMessage());

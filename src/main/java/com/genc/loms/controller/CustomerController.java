@@ -57,21 +57,21 @@ public class CustomerController {
 			
 			HttpSession session = request.getSession();
 			session.setAttribute("customerId",customerData.getCustomerId());
-			
-		
-			
-//			HttpSession session, HttpServletRequest request
-//			session.setAttribute("name", customerData.getName());
-//			session.getAttribute("name");
-//			session.invalidate();
-			//session.g
-			//session.
-			//request.getSession().setMaxInactiveInterval(2000);
 		}
 
 		
 		return new ResponseEntity<Map<String,Object>>(response,HttpStatus.OK);
 		
+	}
+	
+	@GetMapping("/logout")
+	public ResponseEntity<String> customerLogout(HttpSession session){
+		Integer customerId = (Integer)session.getAttribute("customerId"); 
+		if(customerId != null) {
+			session.invalidate();
+			return new ResponseEntity<String>("Logout Success",HttpStatus.OK);
+		}
+		return new ResponseEntity<String>("Error While Logout",HttpStatus.CONFLICT);
 	}
 	
 	

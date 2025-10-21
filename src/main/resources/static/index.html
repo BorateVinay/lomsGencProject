@@ -382,6 +382,8 @@
  
                 if (response.ok) { // Checks for status codes 200-299, specifically 200 OK in your case
                     console.log('Login Successful:', result);
+                    localStorage.setItem('customerEmail', email); // Store email in localStorage
+                    localStorage.setItem('customerName', result.customer.name); // Store customer name from response
                     alert('Customer Login Successfully! Redirecting...');
  
                     // You might want to save customer data/token here before redirecting
