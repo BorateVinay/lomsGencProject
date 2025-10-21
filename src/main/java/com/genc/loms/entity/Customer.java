@@ -5,6 +5,7 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 
+import java.util.Base64;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -85,10 +86,12 @@ public class Customer {
 		return password;
 	}
 
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
+//	public void setPassword(String password) {
+//		this.password = password;
+//	}
+    public void setPassword(String encPassword) {
+	this.password = Base64.getEncoder().encodeToString(encPassword.getBytes());
+}
 	public String getPhone() {
 		return phone;
 	}

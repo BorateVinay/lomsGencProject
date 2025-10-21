@@ -6,6 +6,8 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotBlank;
 
+import java.util.Base64;
+
 @Entity
 public class User {
 
@@ -70,10 +72,12 @@ public class User {
 	}
 
 
-	public void setPassword(String password) {
-		this.password = password;
+//	public void setPassword(String password) {
+//		this.password = password;
+//	}
+	public void setPassword(String encPassword) {
+	this.password = Base64.getEncoder().encodeToString(encPassword.getBytes());
 	}
-
 
 	@Override
 	public String toString() {

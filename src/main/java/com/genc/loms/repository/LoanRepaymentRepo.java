@@ -13,13 +13,17 @@ import java.util.Optional;
 @Repository
 public interface LoanRepaymentRepo extends JpaRepository<LoanRepayment, Integer> {
 	//List<LoanRepayment> findByLoanApplication(LoanApplication loanApplication);
-	
-//	 @Query("SELECT lr FROM LoanRepayment lr WHERE lr.loanApplication.applicationId = :loanId")
-//	 Optional<LoanRepayment> findRepaymentByLoanApplicationId(@Param("loanId") int loanId);
-	 
 
-	 List<LoanRepayment> findByLoanApplication(LoanApplication loanApplication);
-	
-	
+//   @Query("SELECT lr FROM LoanRepayment lr WHERE lr.loanApplication.applicationId = :loanId")
+//   Optional<LoanRepayment> findRepaymentByLoanApplicationId(@Param("loanId") int loanId);
+
+
+	List<LoanRepayment> findByLoanApplication(LoanApplication loanApplication);
+
+	// Method to find all repayments for a specific customer
+	@Query("SELECT lr FROM LoanRepayment lr WHERE lr.loanApplication.customer.customerId = :customerId")
+	List<LoanRepayment> findByCustomerId(@Param("customerId") int customerId);
+
+
 }
  

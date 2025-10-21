@@ -30,7 +30,7 @@ public class LoanDisbursalService {
 		 
 		loanDisbursal.setApplicationId(loanApplication);
 		//loanDisbursal.setApprovedBy("Rahul");
-		loanDisbursal.setDisbursalAmount(4500.0);
+		loanDisbursal.setDisbursalAmount(loanApplication.getAmountRequested());
 		loanDisbursal.setDisbursalDate(new Date());
 		
 		repo.save(loanDisbursal);
