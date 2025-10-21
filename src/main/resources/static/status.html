@@ -52,15 +52,16 @@
                                 <th scope="col">Loan Type</th>
                                 <th scope="col">Amount Requested</th>
                                 <th scope="col">Status</th>
-                                <th scope="col">Action</th> </tr>
+                                <th scope="col">Action</th>
+                            </tr>
                         </thead>
                         <tbody id="loanTableBody">
-                            </tbody>
+                        </tbody>
                     </table>
                 </div>
 
                 <div id="repaymentMessage" class="alert mt-4" role="alert" style="display: none;">
-                    </div>
+                </div>
 
                 <div id="errorMessage" class="alert alert-danger text-center" role="alert" style="display: none;">
                     Could not fetch data. Please ensure the API is running at <code>http://localhost:8082/getCustomerLoans</code>.
@@ -109,12 +110,10 @@
                 
                 // Perform the PUT request to the repayment endpoint
                 const response = await fetch(repaymentUrl, {
-                    method: 'PUT', // Changed from POST to PUT
+                    method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json'
-                        // You might need to add other headers like Authorization if required
                     }
-                    // No body needed for a simple PUT trigger
                 });
 
                 // Assuming the API returns a JSON response on success/failure
@@ -137,8 +136,8 @@
             } finally {
                  // Always show the message after attempt
                 repaymentMessage.style.display = 'block'; 
-                // Optionally refetch data to update the status in the table
-                // fetchAndRenderLoans(); 
+                // 🚀 FIX: Refetch data to update the status in the table automatically
+                fetchAndRenderLoans(); 
             }
         }
 
@@ -151,7 +150,7 @@
             loadingMessage.style.display = 'block';
             loanContainer.style.display = 'none';
             errorMessage.style.display = 'none';
-            document.getElementById('repaymentMessage').style.display = 'none'; // Clear any old payment messages
+            // Do not clear repayment message here, as it provides immediate feedback before the table refreshes
             loanTableBody.innerHTML = ''; // Clear previous data
 
             try {
@@ -172,12 +171,23 @@
                 }
 
                 if (loans.length === 0) {
-                    // Changed colspan to 6 to account for the new Action column
                     loanTableBody.innerHTML = '<tr><td colspan="6" class="text-center text-muted py-4">No loan applications found for this customer.</td></tr>'; 
                     loanContainer.style.display = 'block';
                 } else {
                     // Generate table rows dynamically
                     loans.forEach(loan => {
+                        
+                        // Conditional Pay Button HTML
+                        let actionButtonHtml = '';
+                        // Only show the Pay button if the status is APPROVED
+                        if (loan.status === 'APPROVED') {
+                            actionButtonHtml = `
+                                <button class="btn btn-sm btn-success pay-button" data-application-id="${loan.applicationId}">
+                                    Pay
+                                </button>
+                            `;
+                        }
+
                         const row = document.createElement('tr');
                         row.innerHTML = `
                             <td>
@@ -199,15 +209,12 @@
                                 ${getStatusBadge(loan.status)}
                             </td>
                             <td>
-                                <button class="btn btn-sm btn-success pay-button" data-application-id="${loan.applicationId}">
-                                    Pay
-                                </button>
-                            </td>
+                                ${actionButtonHtml} </td>
                         `;
                         loanTableBody.appendChild(row);
                     });
                     
-                    // Attach event listeners to all 'Pay' buttons
+                    // Attach event listeners ONLY to the existing '.pay-button' elements
                     document.querySelectorAll('.pay-button').forEach(button => {
                         button.addEventListener('click', (event) => {
                             // Get the applicationId from the data attribute

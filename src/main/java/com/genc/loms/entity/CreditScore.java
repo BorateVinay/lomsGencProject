@@ -1,6 +1,8 @@
 package com.genc.loms.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
+
 import java.time.LocalDate;
 
 @Entity
@@ -12,7 +14,7 @@ public class CreditScore {
     @Column(name = "score_id")
     private int scoreId;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "customer_id", nullable = false)
     private Customer customer;
 

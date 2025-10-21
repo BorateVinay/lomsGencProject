@@ -9,6 +9,8 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.ToString;
 
  
@@ -23,16 +25,17 @@ public class LoanApplication {
 	@JoinColumn(name = "customerId")
 	private Customer customer;
 	
+	
 	public enum LoanType
 	{PERSONAL, HOME, AUTO}
-	
 	@Enumerated(EnumType.STRING)
 	private LoanType loanType;
+	
 	
 	private double amountRequested;
 	
 	public enum Status
-	{PENDING, APPROVED, REJECTED}
+	{PENDING, APPROVED, REJECTED, PAID}
 	@Enumerated(EnumType.STRING)
 	private Status status;
 	

@@ -1,6 +1,7 @@
 package com.genc.loms.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 
 import java.time.LocalDate;
 import java.util.Date;
@@ -14,8 +15,13 @@ public class LoanRepayment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int repaymentId;
 
+    
     private double amountPaid;
+    
+   
     private LocalDate paymentDate;
+    
+  
     private LocalDate dueDate;
 
     @OneToOne

@@ -10,6 +10,8 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 @Entity
 public class LoanDisbursal {
@@ -22,7 +24,11 @@ public class LoanDisbursal {
 	private LoanApplication applicationId;
 	
 	private double disbursalAmount;
+	
+	
 	private Date disbursalDate;
+	
+	
 	private String approvedBy;
 	
 	

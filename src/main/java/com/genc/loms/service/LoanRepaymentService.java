@@ -45,7 +45,9 @@ public class LoanRepaymentService {
 //    	get the Loan Loanrepayment By application Id
     	
     	LoanApplication loanApplication = loanApplicationRepo.findByApplicationId(applicationId).get(0);
+    	loanApplication.setStatus(LoanApplication.Status.PAID);
     	LoanRepayment loanLoanRepayment = loanRepaymentRepo.findByLoanApplication(loanApplication).get(0);
+    	
         
         // ⭐ Improvement: Handle the Optional from the repository call
     	//LoanRepayment loanLoanRepayment = loanRepaymentRepo.findRepaymentByLoanApplicationId(applicationId)

@@ -5,6 +5,8 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
 
 import java.util.Base64;
 
@@ -15,13 +17,14 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int userId;
     
-    @NotBlank
+    @Size(min = 2,max = 30 , message = "Name Between 2 - 30 cgaracter")
+    @Pattern(regexp = "^[A-Za-z ]+$" , message = "Name Should contain Alphabets")
     private String name;
     
-    @NotBlank
+    @NotBlank(message = "UserName Cannot be Blank")
     private String userName;
 
-    @NotBlank	
+    @NotBlank(message = "Pasword cannot be Blank")	
     private String password;
     
 
