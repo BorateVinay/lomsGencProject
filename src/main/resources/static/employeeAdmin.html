@@ -48,25 +48,27 @@
             <ul class="nav flex-column px-3">
                 <li class="nav-item mb-1">
                     <a class="nav-link active" aria-current="page" href="#" 
-                       onclick="loadContent('dashboard-home.html', this)">
+                        onclick="loadContent('dashboard-home.html', this)">
                         <i class="bi bi-house-door me-2"></i> Admin Home
                     </a>
                 </li>
                 <li class="nav-item mb-1">
                     <a class="nav-link text-dark" href="ApproveRejectLoan.html" target="contentFrame"
-                       onclick="loadContent('ApproveRejectLoan.html', this)">
+                        onclick="loadContent('ApproveRejectLoan.html', this)">
                         <i class="bi bi-clock-history me-2"></i> Pending Loans
                     </a>
                 </li>
                 <li class="nav-item mb-1">
                     <a class="nav-link text-dark" href="employeeHome.html" target="contentFrame"
-                       onclick="loadContent('employeeHome.html', this)">
+                        onclick="loadContent('employeeHome.html', this)">
                         <i class="bi bi-list-task me-2"></i> All Applications
                     </a>
                 </li>
             </ul>
             <div class="p-3 border-top mt-auto">
-                <a href="#" class="btn btn-sm btn-outline-danger w-100"><i class="bi bi-box-arrow-right me-2"></i> Logout</a>
+                <a href="" class="btn btn-sm btn-outline-danger w-100" onclick="handleLogout(event)">
+                    <i class="bi bi-box-arrow-right me-2"></i> Logout
+                </a>
             </div>
         </div>
 
@@ -76,7 +78,7 @@
                     <button class="btn btn-primary d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="bi bi-list"></i>
                     </button>
-                    <span class="navbar-brand text-muted d-none d-md-block">Welcome, Loan Officer</span>
+                    <span class="navbar-brand text-muted d-none d-md-block" id="employeeName">Welcome, Loan Officer</span>
                 </div>
             </nav>
 
@@ -112,6 +114,50 @@
              // Programmatically click the 'Admin Home' link to set the initial state
             document.querySelector('.nav-link[aria-current="page"]').click();
         });
+
+        const employeeName = localStorage.getItem('employeeName') || 'Loan Officer';
+        document.getElementById('employeeName').textContent = `Welcome, ${employeeName}`;
+
+        /**
+         * Handles the logout process: calls the REST API and redirects.
+         * @param {Event} event - The click event.
+         */
+        // IMPORTANT CHANGE: Updated function to include fetch call
+        async function handleLogout(event) {
+            event.preventDefault();
+            
+            const logoutUrl = 'http://localhost:8082/logout';
+
+            try {
+                // Perform the GET request to the logout API
+                const response = await fetch(logoutUrl, {
+                    method: 'GET', // Or 'POST', depending on your API's requirement
+                    // You might need to add headers for authorization/cookies here
+                });
+
+                // Check if the API call was successful (status 200-299)
+                if (response.ok) {
+                    console.log('Logout API call successful.');
+                } else {
+                    // Log or show an error if the API responded with a non-success status
+                    console.error('Logout failed on the server:', response.status);
+                    // You can optionally continue the local logout even if the API call fails
+                }
+            } catch (error) {
+                // Handle network errors (e.g., server is down, no internet)
+                console.error('Network or fetch error during logout:', error);
+                // Continue with local logout steps to ensure user is logged out locally
+            }
+
+            // Clear any stored local session data regardless of API success/failure
+            localStorage.removeItem('employeeName');
+            
+            // Redirect to the login page
+            window.location.href = 'index.html';
+        }
+
+        // Note: The original HTML had the 'handleLogout' function, but the 'onclick' was missing
+        // from the anchor tag. I've added it back in the HTML section.
     </script>
 </body>
 </html>

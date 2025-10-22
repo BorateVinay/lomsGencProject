@@ -315,11 +315,13 @@
  
                 // Log status for debugging
                 console.log("Response status:", response.status);
+                const result = await response.json();;
  
                 // 4. Handle the response
                 if (response.ok) { // Status code 200-299
-                    const result = await response.text(); // Use text() first to see the exact response if JSON fails
+                    // const result = await response.text(); // Use text() first to see the exact response if JSON fails
                     console.log('Login Successful - Response Body:', result);
+                    localStorage.setItem('employeeName', result.user.name); // Store employee name from response
                     alert('Login successful! Redirecting to home page.');
  
                     // 5. Redirect to Home.html
