@@ -23,7 +23,7 @@
         
         <div class="card mb-3">
             <div class="card-header bg-light">
-                **Customer Details**
+                Customer Details
             </div>
             <div class="card-body">
                 <div class="mb-3">
@@ -46,7 +46,7 @@
 
         <div class="card mb-3">
             <div class="card-header bg-light">
-                **Loan Details**
+                Loan Details
             </div>
             <div class="card-body">
                 <div class="mb-3">
@@ -82,7 +82,7 @@
 
 <script>
     // Updated JavaScript for handling form submission and credit score calculation
-    document.addEventListener('DOMContentLoaded', function () {
+  /*   document.addEventListener('DOMContentLoaded', function () {
         'use strict';
         
         const form = document.getElementById('loanApplicationForm');
@@ -137,8 +137,8 @@
             .then(data => {
                 // Assuming the API returns a structure like: { "status": "Success", "data": { "score": 750, ... } }
                 // Adjusting to extract the actual score value from the 'data' object.
-                if (data.status === 'Success' && data.data && data.data.score) {
-                    return data.data.score;
+                if (data.status === 'Success' && data.data && data.data.creditScore) {
+                    return data.data.creditScore;
                 } else if (data.status === 'error' && data.message) {
                     throw new Error(`Credit Score Error: ${data.message}`);
                 } else {
@@ -201,8 +201,8 @@
                 // C. Final Success Response
                 feedbackDiv.className = 'mt-4 p-3 border border-success text-success';
                 feedbackDiv.innerHTML = `
-                    **✅ Success! Application Submitted and Scored.**
-                    <br>**Credit Score:** **${creditScore}**
+                    Success! Application Submitted and Scored.
+                    <br>Credit Score:${creditScore}
                     <br>Application ID: ${submissionData.applicationId}
                     <br>Loan Type: ${submissionData.loanType}
                 `;
@@ -213,7 +213,7 @@
                 // Catch any network errors, submission errors, or credit score errors
                 feedbackDiv.className = 'mt-4 p-3 border border-danger text-danger';
                 feedbackDiv.innerHTML = `
-                    **❌ Process Failed!**
+                    Process Failed!
                     <br>Could not complete the process.
                     <br>Error: ${error.message}
                 `;
@@ -223,6 +223,153 @@
                 }
             }
         }
+    }); */
+ // Updated JavaScript for handling form submission and credit score calculation
+    document.addEventListener('DOMContentLoaded', function () {
+        'use strict';
+        
+        const form = document.getElementById('loanApplicationForm');
+        const feedbackDiv = document.getElementById('submissionFeedback');
+        const loanSubmissionUrl = 'http://localhost:8082/submitloanapplication';
+        const creditScoreUrl = 'http://localhost:8082/evaluate'; 
+        
+        // --- New Constant for Redirection Delay ---
+        const REDIRECT_DELAY_MS = 3000; // 3 seconds
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+            
+            form.classList.add('was-validated');
+
+            if (!form.checkValidity()) {
+                return;
+            }
+
+            // Start the combined process
+            calculateCreditScoreAndSubmitLoan();
+        });
+
+        function showLoading(message) {
+            feedbackDiv.className = 'mt-4 p-3 border text-center text-secondary';
+            feedbackDiv.innerHTML = `<p class="mb-0">${message} ⏳</p>`;
+            feedbackDiv.style.display = 'block';
+        }
+        
+        // --- Credit Score Function (Unchanged) ---
+        function calculateCreditScore() {
+            showLoading('Credit score evaluation initiated...');
+
+            return fetch(creditScoreUrl, {
+                method: 'GET',
+                headers: {
+                    // Send credentials to maintain the session
+                    'Content-Type': 'application/json' 
+                }
+            })
+            .then(response => {
+                if (!response.ok) {
+                    return response.json().then(err => {
+                        throw new Error(err.message || `Credit Score API failed with status ${response.status}`);
+                    });
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data.status === 'Success' && data.data && data.data.creditScore) {
+                    return data.data.creditScore;
+                } else if (data.status === 'error' && data.message) {
+                    throw new Error(`Credit Score Error: ${data.message}`);
+                } else {
+                    return 'N/A (Response Structure Unexpected)';
+                }
+            });
+        }
+        // --- END Credit Score Function ---
+
+        // --- UPDATED MAIN FUNCTION: Added Redirection Logic ---
+        async function calculateCreditScoreAndSubmitLoan() {
+            const customerId = document.getElementById('customerId').value;
+            const phone = document.getElementById('phone').value;
+            const address = document.getElementById('address').value;
+            const loanType = document.getElementById('loanType').value;
+            const amountRequested = document.getElementById('amountRequested').value;
+            
+            let submissionData = null;
+            let creditScore = 'N/A';
+
+            const payload = {
+                "customer": {
+                    "customerId": parseInt(customerId),
+                    "phone": phone,
+                    "address": address
+                },
+                "loanApplication": {
+                    "loanType": loanType,
+                    "amountRequested": parseFloat(amountRequested).toFixed(2) 
+                }
+            };
+            
+            try {
+                // A. Submit the Loan Application (POST)
+                showLoading('Submitting loan application...');
+
+                const response = await fetch(loanSubmissionUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                submissionData = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(`Loan Submission Failed (Status: ${response.status}). Message: ${submissionData.message || 'Server error.'}`);
+                }
+                
+                // B. Calculate Credit Score (GET)
+                showLoading(`Application ID ${submissionData.applicationId} submitted. Now evaluating credit score...`);
+                creditScore = await calculateCreditScore();
+                
+                // C. Final Success Response and REDIRECTION
+                feedbackDiv.className = 'mt-4 p-3 border border-success text-success';
+                feedbackDiv.innerHTML = `
+                    Success! Application Submitted and Scored.
+                    <br>Credit Score: <strong>${creditScore}</strong>
+                    <br>Application ID: ${submissionData.applicationId}
+                    <br>Loan Type: ${submissionData.loanType}
+                    <br><small>Redirecting to Home in ${REDIRECT_DELAY_MS / 1000} seconds...</small>
+                `;
+                form.reset();
+                form.classList.remove('was-validated');
+
+                // --- REDIRECTION LOGIC (SUCCESS) ---
+                setTimeout(() => {
+                    window.location.href = 'Home.html'; // Redirect to Home.html
+                }, REDIRECT_DELAY_MS);
+
+            } catch (error) {
+                // Catch any network errors, submission errors, or credit score errors
+                feedbackDiv.className = 'mt-4 p-3 border border-danger text-danger';
+                
+                let errorMessage = `Process Failed! <br>Error: <strong>${error.message}</strong>`;
+
+                // Display partial results if submission succeeded but scoring failed
+                if (submissionData) {
+                     errorMessage += `<br>Loan Submission Succeeded (ID: ${submissionData.applicationId}), but **Credit Score Evaluation Failed.**`;
+                }
+
+                errorMessage += `<br><small>Redirecting to Home in ${REDIRECT_DELAY_MS / 1000} seconds...</small>`;
+                feedbackDiv.innerHTML = errorMessage;
+                
+                // --- REDIRECTION LOGIC (ERROR) ---
+                setTimeout(() => {
+                    window.location.href = 'Home.html'; // Redirect to Home.html even on error
+                }, REDIRECT_DELAY_MS);
+            }
+        }
+        // --- END UPDATED MAIN FUNCTION ---
     });
 </script>
 
