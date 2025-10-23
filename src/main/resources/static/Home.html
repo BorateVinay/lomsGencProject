@@ -153,6 +153,7 @@
           <div class="card-body">
             <h5 class="card-title text-warning"><i class="fas fa-chart-line me-2"></i> Credit Evaluation</h5>
             <p class="card-text text-muted small">Check your eligibility or pre-qualify for a loan.</p>
+            <br>
             <a href="credit-evaluation.html" class="btn btn-outline-warning btn-sm mt-2 w-100">Check Score</a>
           </div>
         </div>
@@ -225,7 +226,8 @@
       localStorage.removeItem('customerName');
 
       // Redirect to the backend controller's logout endpoint
-      window.location.href = 'http://localhost:8082/customer/logout';
+      /* window.location.href = 'http://localhost:8082/customer/logout'; */
+      window.location.href = 'index.html';
   }
 </script>
 

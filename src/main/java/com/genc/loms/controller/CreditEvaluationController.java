@@ -10,6 +10,10 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+// SLF4J Imports
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.genc.loms.entity.CreditScore;
 import com.genc.loms.service.CreditEvaluationService;
 
@@ -19,16 +23,24 @@ import jakarta.servlet.http.HttpSession;
 @CrossOrigin(origins = "*")
 public class CreditEvaluationController {
 
+	// 1. Declare a static final Logger instance using SLF4J factory
+	private static final Logger logger = LoggerFactory.getLogger(CreditEvaluationController.class);
+
 	@Autowired
 	private CreditEvaluationService creditEvaluationService;
 
 	@GetMapping("/evaluate")
 	public ResponseEntity<Map<String, Object>> evaluateCreditScore(HttpSession session) {
+		// Log method entry
+		logger.info("Received request to evaluate credit score.");
+		
 		Map<String, Object> map = new HashMap<>();
 
 		Object customerIdObj = session.getAttribute("customerId");
 
 		if (customerIdObj == null) {
+			// Log an attempt with missing data
+			logger.warn("Attempt to evaluate credit score without 'customerId' in session. Returning 401 UNAUTHORIZED.");
 			map.put("status", "error");
 			map.put("message", "customerId not found");
 			return new ResponseEntity<>(map, HttpStatus.UNAUTHORIZED);
@@ -36,13 +48,21 @@ public class CreditEvaluationController {
 
 		try {
 			int customerId = (int) customerIdObj;
+			logger.info("Starting credit score evaluation for customerId: {}", customerId);
+			
 			CreditScore creditScore = creditEvaluationService.evaluateCreditScore(customerId);
+			
+			// Log successful operation and key data
+			logger.info("Successfully evaluated and recorded credit score for customerId: {}. Score: {}", customerId, creditScore.getCreditScore());
+			
 			map.put("status", "Success");
 			map.put("message", "Credit score evaluated and recorded successfully.");
 			map.put("data", creditScore);
 
 			return new ResponseEntity<>(map, HttpStatus.OK);
 		} catch (Exception e) {
+			// Log the exception. SLF4J automatically includes the stack trace when the exception is passed as the last argument.
+			logger.error("Error evaluating credit score for customerId: {}. Exception: {}", customerIdObj, e.getMessage(), e);
 			map.put("error", "Failed to evaluate credit score: " + e.getMessage());
 			return new ResponseEntity<>(map, HttpStatus.INTERNAL_SERVER_ERROR);
 		}
