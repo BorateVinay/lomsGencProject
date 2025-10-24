@@ -52,7 +52,7 @@ public class CreditEvaluationController {
 			
 			CreditScore creditScore = creditEvaluationService.evaluateCreditScore(customerId);
 			
-			// Log successful operation and key data
+			
 			logger.info("Successfully evaluated and recorded credit score for customerId: {}. Score: {}", customerId, creditScore.getCreditScore());
 			
 			map.put("status", "Success");
@@ -61,7 +61,7 @@ public class CreditEvaluationController {
 
 			return new ResponseEntity<>(map, HttpStatus.OK);
 		} catch (Exception e) {
-			// Log the exception. SLF4J automatically includes the stack trace when the exception is passed as the last argument.
+			
 			logger.error("Error evaluating credit score for customerId: {}. Exception: {}", customerIdObj, e.getMessage(), e);
 			map.put("error", "Failed to evaluate credit score: " + e.getMessage());
 			return new ResponseEntity<>(map, HttpStatus.INTERNAL_SERVER_ERROR);

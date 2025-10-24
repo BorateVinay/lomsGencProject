@@ -1,6 +1,7 @@
 package com.genc.loms.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
@@ -22,6 +23,7 @@ public class Customer {
     private String name;
     
     @NotBlank(message = "Email cannot be Blank")
+    @Email(message="please enter the proper email address")
     private String email;
     
     @NotBlank(message = "Password cannot be blank")
