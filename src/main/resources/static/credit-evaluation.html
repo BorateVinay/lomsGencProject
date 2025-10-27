@@ -61,10 +61,7 @@
             <div class="flex justify-between items-center h-16">
                 <a class="text-xl font-bold text-blue-600" href="#">LOMS Credit Portal</a>
                 <div class="flex items-center space-x-4">
-                    <span id="customer-info" class="text-gray-600 text-sm">Customer ID: 101 (Mock Session)</span>
-                    <button onclick="logout()" class="text-red-500 hover:text-red-700 transition duration-150">
-                        <i data-lucide="log-out" class="w-5 h-5 inline-block align-text-bottom"></i> Logout
-                    </button>
+                    <span id="customer-info" class="text-gray-600 text-sm"></span>
                 </div>
             </div>
         </div>
@@ -123,7 +120,7 @@
 
     <script>
     // NOTE: This customerId is MOCKED since true session management is done server-side.
-    const MOCK_CUSTOMER_ID = 101; 
+     
 
     const reportContainer = document.getElementById('reportContainer');
     const messageArea = document.getElementById('messageArea');
