@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Credit Evaluation - LOMS</title>
-    <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Load Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         /* Define a custom color palette */
@@ -58,7 +56,6 @@
 </head>
 <body class="min-h-screen">
 
-    <!-- Navbar -->
     <nav class="bg-white shadow-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
@@ -73,7 +70,6 @@
         </div>
     </nav>
 
-    <!-- Main Content Container -->
     <div class="max-w-4xl mx-auto p-4 sm:p-6 lg:p-8">
         <div class="bg-white p-6 md:p-10 rounded-xl shadow-lg">
             <h1 class="text-3xl font-extrabold text-gray-800 mb-6 flex items-center">
@@ -81,19 +77,15 @@
                 Credit Evaluation Report
             </h1>
 
-            <!-- Action Button -->
             <button id="evaluateButton" onclick="evaluateCreditScore()"
                 class="w-full md:w-auto px-6 py-3 mb-8 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-300 disabled:opacity-50">
                 <span id="buttonText">Evaluate New Credit Score</span>
                 <i id="loadingSpinner" class="hidden w-5 h-5 ml-2 animate-spin" data-lucide="loader-2"></i>
             </button>
 
-            <!-- Status and Error Message Area -->
             <div id="messageArea" class="mb-6"></div>
             
-            <!-- Credit Score Display Area -->
             <div id="reportContainer" class="hidden">
-                <!-- Score Summary -->
                 <div class="flex flex-col md:flex-row items-center justify-between p-6 bg-gray-50 rounded-lg border border-gray-200 mb-8">
                     <div class="text-center md:text-left mb-4 md:mb-0">
                         <p class="text-sm font-medium text-gray-500 uppercase">Your Latest Score</p>
@@ -101,17 +93,13 @@
                         <span id="scoreRating" class="inline-block mt-2 px-3 py-1 text-xs font-semibold rounded-full"></span>
                     </div>
 
-                    <!-- Score Meter Visualization -->
                     <div class="score-meter" id="scoreMeter" style="--score-percent: 0%; --score-color: #6b7280;">
                         <span class="score-text text-gray-900"></span>
                     </div>
                 </div>
 
-                <!-- Detailed Report Card -->
                 <div class="grid md:grid-cols-2 gap-6">
-                    <!-- Evaluation Date -->
-                    <div class="p-5 bg-white border border-gray-200 rounded-lg shadow-sm">
-                        <div class="flex items-center">
+                    <div class="p-5 bg-white border border-gray-200 rounded-lg shadow-sm md:col-span-2"> <div class="flex items-center">
                             <i data-lucide="calendar" class="w-6 h-6 text-indigo-500 mr-3"></i>
                             <div>
                                 <p class="text-sm text-gray-500">Last Evaluated On</p>
@@ -119,20 +107,8 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Factors Considered -->
-                    <div class="p-5 bg-white border border-gray-200 rounded-lg shadow-sm">
-                        <div class="flex items-center">
-                            <i data-lucide="list-checks" class="w-6 h-6 text-teal-500 mr-3"></i>
-                            <div>
-                                <p class="text-sm text-gray-500">Loan Applications Considered</p>
-                                <p id="loanCount" class="font-bold text-gray-900">--</p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
-                <!-- Guidance Section -->
                 <div class="mt-8 p-6 bg-blue-50 border-l-4 border-blue-600 rounded-lg">
                     <h3 class="font-semibold text-lg text-blue-800 mb-2 flex items-center">
                         <i data-lucide="lightbulb" class="w-5 h-5 mr-2"></i> Credit Guidance
@@ -145,12 +121,9 @@
         </div>
     </div>
 
-    <!-- Initialization and API Logic -->
     <script>
     // NOTE: This customerId is MOCKED since true session management is done server-side.
     const MOCK_CUSTOMER_ID = 101; 
-    // CORRECTED: The base URL is no longer needed, use the direct URL you provided.
-    // const API_BASE_URL = "http://localhost:8082"; 
 
     const reportContainer = document.getElementById('reportContainer');
     const messageArea = document.getElementById('messageArea');
@@ -158,13 +131,13 @@
     const buttonText = document.getElementById('buttonText');
     const loadingSpinner = document.getElementById('loadingSpinner');
 
-    // Function to determine color and rating based on the LOMS score scale (300-400 used in HTML)
+    // Function to determine color and rating based on the LOMS score scale
     function getScoreMetrics(score) {
         let rating = '';
         let color = '';
         let colorClass = '';
 
-        // Adjusted logic to match your provided HTML's score ranges (which are quite low)
+        // Score ranges used for visual rating (300-400 logic retained from original)
         if (score >= 350) {
             rating = 'Excellent';
             color = '#007bff'; /* Blue (Primary) */
@@ -214,9 +187,9 @@
         lucide.createIcons();
     }
 
-    // UPDATED function to handle the specific response structure
+    // Function to render the credit report from the API data
     function renderReport(data) {
-        // Access nested properties based on the successful response structure
+        // Access nested properties based on the expected successful response structure
         const score = data.creditScore;
         const metrics = getScoreMetrics(score);
         const evaluationDate = data.evaluationDate;
@@ -225,12 +198,10 @@
         const scoreMeterElement = document.getElementById('scoreMeter');
         const scoreTextElement = scoreMeterElement.querySelector('.score-text');
 
-        // Calculate percentage for gauge (Using 300 min, 400 max for demonstration)
-        // Note: The HTML's styling is visually designed for 300-850, but the score logic is 300-400.
-        // Let's use 300-850 for the visual, but the logic will follow your provided ranges.
+        // Calculate percentage for gauge (Using 300 min, 850 max for visual scale)
         const SCORE_MIN = 300;
         const SCORE_MAX = 850;
-        const scorePercent = Math.min(100, (score - SCORE_MIN) / (SCORE_MAX - SCORE_MIN) * 100);
+        const scorePercent = Math.min(100, Math.max(0, (score - SCORE_MIN) / (SCORE_MAX - SCORE_MIN) * 100));
 
         // Apply styles to score meter
         scoreMeterElement.style.setProperty('--score-percent', `${scorePercent}%`);
@@ -248,48 +219,50 @@
         // Use provided data
         document.getElementById('displayDate').textContent = evaluationDate;
         
-        // NOTE: The provided structure is missing a list of loan applications, 
-        // so we'll show a mock count based on the customer details.
-        document.getElementById('loanCount').textContent = '2'; // Mocking loan count
-        
-        // Update customer info in the navbar (for better feedback)
-        document.getElementById('customer-info').textContent = `${customer.name} (ID: ${customer.customerId})`;
+        // Update customer info in the navbar
+        document.getElementById('customer-info').textContent = `${customer.name || 'Mock Customer'} (ID: ${customer.customerId})`;
         
         reportContainer.classList.remove('hidden');
     }
 
-    // UPDATED function to hit the exact URL and parse the response
+    // UPDATED: Core function to call the API with robust error handling
     async function evaluateCreditScore() {
         setLoading(true);
+        reportContainer.classList.add('hidden'); // Hide old report on new evaluation attempt
         
-        // CORRECTED URL based on the user request
+        // Use the exact, non-mocked URL
         const url = `http://localhost:8082/evaluate`; 
         
         try {
             const response = await fetch(url, {
-                method: 'GET', // Matches your controller's @GetMapping
+                method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
                 }
             });
 
+            // Throw an error if the connection or HTTP status is not successful
+            if (!response.ok) {
+                // Attempt to parse JSON error message if available
+                const errorResult = await response.json().catch(() => ({}));
+                const statusText = errorResult.message || response.statusText || `HTTP Error ${response.status}`;
+                throw new Error(statusText);
+            }
+
             const result = await response.json();
             
-            // Check for successful HTTP status (200 OK)
-            if (response.ok && result.status === 'Success') {
-                // The data we need is inside the 'data' field of the response
+            if (result.status === 'Success') {
                 displayMessage('success', result.message);
                 renderReport(result.data);
             } else {
-                // Handle server-side errors (e.g., status: "error", message: "customerId not found")
-                const errorMessage = result.message || `Server returned status: ${result.status}`;
+                // Handle API error messages (e.g., status: "error")
+                const errorMessage = result.message || 'An unknown error occurred during evaluation.';
                 displayMessage('error', errorMessage);
-                reportContainer.classList.add('hidden');
             }
         } catch (error) {
             console.error("Fetch Error:", error);
-            displayMessage('error', `Could not connect to the API server: ${error.message}`);
-            reportContainer.classList.add('hidden');
+            // Display a user-friendly error message, especially for network failures
+            displayMessage('error', `Evaluation failed. Please ensure the API server is running at ${url}. Error: ${error.message}`);
         } finally {
             setLoading(false);
             lucide.createIcons();
@@ -298,7 +271,7 @@
 
     function logout() {
         alert("Logging out (Session clearing logic is server-side).");
-        window.location.href = 'index.html';
+        // In a real application, this would redirect or clear local storage/cookies
     }
 
     // Initial setup on load
@@ -311,3 +284,5 @@
     // Initialize icons
     lucide.createIcons();
 </script>
+</body>
+</html>

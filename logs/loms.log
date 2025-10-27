@@ -265,3 +265,693 @@
 2025-10-24T18:47:08.545+05:30  INFO 14980 --- [loms] [RMI TCP Connection(299)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-10-24T18:47:08.553+05:30  INFO 14980 --- [loms] [RMI TCP Connection(299)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
 2025-10-24T18:47:08.559+05:30  INFO 14980 --- [loms] [RMI TCP Connection(299)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-10-27T00:14:57.322+05:30  INFO 35460 --- [loms] [restartedMain] com.genc.loms.LomsApplication            : Starting LomsApplication using Java 21.0.7 with PID 35460 (C:\Users\2442579\eclipse-workspace\lomsVinay\target\classes started by 2442579 in C:\Users\2442579\eclipse-workspace\lomsVinay)
+2025-10-27T00:14:57.324+05:30  INFO 35460 --- [loms] [restartedMain] com.genc.loms.LomsApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-10-27T00:14:57.385+05:30  INFO 35460 --- [loms] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-27T00:14:57.385+05:30  INFO 35460 --- [loms] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-27T00:14:58.479+05:30  INFO 35460 --- [loms] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-27T00:14:58.559+05:30  INFO 35460 --- [loms] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 6 JPA repository interfaces.
+2025-10-27T00:14:59.096+05:30  INFO 35460 --- [loms] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2025-10-27T00:14:59.114+05:30  INFO 35460 --- [loms] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-27T00:14:59.115+05:30  INFO 35460 --- [loms] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-27T00:14:59.179+05:30  INFO 35460 --- [loms] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-27T00:14:59.180+05:30  INFO 35460 --- [loms] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1793 ms
+2025-10-27T00:14:59.385+05:30  INFO 35460 --- [loms] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-27T00:14:59.473+05:30  INFO 35460 --- [loms] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-27T00:14:59.534+05:30  INFO 35460 --- [loms] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-27T00:14:59.881+05:30  INFO 35460 --- [loms] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-27T00:14:59.918+05:30  INFO 35460 --- [loms] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-27T00:15:00.288+05:30  INFO 35460 --- [loms] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@f470741
+2025-10-27T00:15:00.290+05:30  INFO 35460 --- [loms] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-27T00:15:00.395+05:30  INFO 35460 --- [loms] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.43
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-27T00:15:01.718+05:30  INFO 35460 --- [loms] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-27T00:15:01.873+05:30  INFO 35460 --- [loms] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-27T00:15:02.255+05:30  INFO 35460 --- [loms] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-27T00:15:03.454+05:30  WARN 35460 --- [loms] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-27T00:15:03.493+05:30  INFO 35460 --- [loms] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-10-27T00:15:03.918+05:30  WARN 35460 --- [loms] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-10-27T00:15:04.226+05:30  INFO 35460 --- [loms] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-27T00:15:04.286+05:30  INFO 35460 --- [loms] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2025-10-27T00:15:04.297+05:30  INFO 35460 --- [loms] [restartedMain] com.genc.loms.LomsApplication            : Started LomsApplication in 7.466 seconds (process running for 8.461)
+2025-10-27T00:15:45.768+05:30  INFO 35460 --- [loms] [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-27T00:15:45.768+05:30  INFO 35460 --- [loms] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-27T00:15:45.770+05:30  INFO 35460 --- [loms] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-27T00:16:33.454+05:30  INFO 35460 --- [loms] [http-nio-8082-exec-2] c.genc.loms.controller.UserController    : Received POST request for login attempt by username: admini
+2025-10-27T00:16:33.565+05:30  WARN 35460 --- [loms] [http-nio-8082-exec-2] c.genc.loms.controller.UserController    : Login failed for user: admini. Wrong credentials.
+2025-10-27T00:17:02.612+05:30  INFO 35460 --- [loms] [http-nio-8082-exec-3] c.genc.loms.controller.UserController    : Received POST request for login attempt by username: admin
+2025-10-27T00:17:02.645+05:30  INFO 35460 --- [loms] [http-nio-8082-exec-3] c.genc.loms.controller.UserController    : User admin logged in successfully. Session created.
+2025-10-27T00:17:22.694+05:30  INFO 35460 --- [loms] [http-nio-8082-exec-8] c.g.loms.controller.CustomerController   : Login attempt for email: vinay@gmail.com
+2025-10-27T00:17:22.714+05:30  INFO 35460 --- [loms] [http-nio-8082-exec-8] c.g.loms.controller.CustomerController   : Customer login successful for ID: 1
+2025-10-27T00:24:48.621+05:30  INFO 35460 --- [loms] [http-nio-8082-exec-2] c.g.l.c.LoanApplicationController        : Received request to retrieve all pending loan applications.
+2025-10-27T00:24:48.650+05:30  INFO 35460 --- [loms] [http-nio-8082-exec-2] c.g.l.c.LoanApplicationController        : Successfully retrieved 1 pending loan applications.
+2025-10-27T00:24:51.445+05:30  INFO 35460 --- [loms] [http-nio-8082-exec-5] c.g.l.c.LoanApplicationController        : Received request to retrieve all pending loan applications.
+2025-10-27T00:24:51.453+05:30  INFO 35460 --- [loms] [http-nio-8082-exec-5] c.g.l.c.LoanApplicationController        : Successfully retrieved 1 pending loan applications.
+2025-10-27T00:24:56.473+05:30  INFO 35460 --- [loms] [http-nio-8082-exec-7] c.g.l.c.LoanApplicationController        : Received request to retrieve all loan applications.
+2025-10-27T00:24:56.509+05:30  INFO 35460 --- [loms] [http-nio-8082-exec-7] c.g.l.c.LoanApplicationController        : Successfully retrieved 7 loan applications.
+2025-10-27T00:25:59.646+05:30  INFO 35460 --- [loms] [http-nio-8082-exec-9] c.g.l.c.CreditEvaluationController       : Received request to evaluate credit score.
+2025-10-27T00:25:59.646+05:30  INFO 35460 --- [loms] [http-nio-8082-exec-9] c.g.l.c.CreditEvaluationController       : Starting credit score evaluation for customerId: 1
+2025-10-27T00:25:59.830+05:30  INFO 35460 --- [loms] [http-nio-8082-exec-9] c.g.l.c.CreditEvaluationController       : Successfully evaluated and recorded credit score for customerId: 1. Score: 350
+2025-10-27T00:26:40.597+05:30  INFO 35460 --- [loms] [http-nio-8082-exec-10] c.g.l.c.CreditEvaluationController       : Received request to evaluate credit score.
+2025-10-27T00:26:40.598+05:30  INFO 35460 --- [loms] [http-nio-8082-exec-10] c.g.l.c.CreditEvaluationController       : Starting credit score evaluation for customerId: 1
+2025-10-27T00:26:40.615+05:30  INFO 35460 --- [loms] [http-nio-8082-exec-10] c.g.l.c.CreditEvaluationController       : Successfully evaluated and recorded credit score for customerId: 1. Score: 350
+2025-10-27T00:27:04.375+05:30  INFO 35460 --- [loms] [http-nio-8082-exec-2] c.g.l.c.CreditEvaluationController       : Received request to evaluate credit score.
+2025-10-27T00:27:04.375+05:30  INFO 35460 --- [loms] [http-nio-8082-exec-2] c.g.l.c.CreditEvaluationController       : Starting credit score evaluation for customerId: 1
+2025-10-27T00:27:04.395+05:30  INFO 35460 --- [loms] [http-nio-8082-exec-2] c.g.l.c.CreditEvaluationController       : Successfully evaluated and recorded credit score for customerId: 1. Score: 350
+2025-10-27T01:39:17.094+05:30  INFO 35460 --- [loms] [RMI TCP Connection(88)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-10-27T01:39:17.100+05:30  INFO 35460 --- [loms] [RMI TCP Connection(88)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-27T01:39:17.108+05:30  INFO 35460 --- [loms] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-27T01:39:17.114+05:30  INFO 35460 --- [loms] [RMI TCP Connection(88)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-27T01:39:17.122+05:30  INFO 35460 --- [loms] [RMI TCP Connection(88)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-27T01:39:17.126+05:30  INFO 35460 --- [loms] [RMI TCP Connection(88)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-27T09:04:12.209+05:30  INFO 4628 --- [loms] [restartedMain] com.genc.loms.LomsApplication            : Starting LomsApplication using Java 21.0.7 with PID 4628 (C:\Users\2442579\eclipse-workspace\lomsVinay\target\classes started by 2442579 in C:\Users\2442579\eclipse-workspace\lomsVinay)
+2025-10-27T09:04:12.213+05:30  INFO 4628 --- [loms] [restartedMain] com.genc.loms.LomsApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-10-27T09:04:12.277+05:30  INFO 4628 --- [loms] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-27T09:04:12.278+05:30  INFO 4628 --- [loms] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-27T09:04:13.867+05:30  INFO 4628 --- [loms] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-27T09:04:13.964+05:30  INFO 4628 --- [loms] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80 ms. Found 6 JPA repository interfaces.
+2025-10-27T09:04:14.669+05:30  INFO 4628 --- [loms] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2025-10-27T09:04:14.691+05:30  INFO 4628 --- [loms] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-27T09:04:14.693+05:30  INFO 4628 --- [loms] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-27T09:04:14.786+05:30  INFO 4628 --- [loms] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-27T09:04:14.787+05:30  INFO 4628 --- [loms] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2508 ms
+2025-10-27T09:04:14.995+05:30  INFO 4628 --- [loms] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-27T09:04:15.109+05:30  INFO 4628 --- [loms] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-27T09:04:15.174+05:30  INFO 4628 --- [loms] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-27T09:04:15.587+05:30  INFO 4628 --- [loms] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-27T09:04:15.640+05:30  INFO 4628 --- [loms] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-27T09:04:16.200+05:30  INFO 4628 --- [loms] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2d2381f4
+2025-10-27T09:04:16.202+05:30  INFO 4628 --- [loms] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-27T09:04:16.356+05:30  INFO 4628 --- [loms] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.43
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-27T09:04:18.631+05:30  INFO 4628 --- [loms] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-27T09:04:18.915+05:30  INFO 4628 --- [loms] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-27T09:04:19.594+05:30  INFO 4628 --- [loms] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-27T09:04:20.932+05:30  WARN 4628 --- [loms] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-27T09:04:20.964+05:30  INFO 4628 --- [loms] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-10-27T09:04:21.366+05:30  WARN 4628 --- [loms] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-10-27T09:04:21.784+05:30  INFO 4628 --- [loms] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-27T09:04:21.857+05:30  INFO 4628 --- [loms] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2025-10-27T09:04:21.868+05:30  INFO 4628 --- [loms] [restartedMain] com.genc.loms.LomsApplication            : Started LomsApplication in 10.333 seconds (process running for 11.657)
+2025-10-27T09:04:22.398+05:30  INFO 4628 --- [loms] [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-27T09:04:22.399+05:30  INFO 4628 --- [loms] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-27T09:04:22.402+05:30  INFO 4628 --- [loms] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-10-27T09:04:49.401+05:30  INFO 4628 --- [loms] [http-nio-8082-exec-2] c.g.loms.controller.CustomerController   : Received request to register a new customer: indu@gmail.com
+2025-10-27T09:04:49.681+05:30  INFO 4628 --- [loms] [http-nio-8082-exec-2] c.g.loms.controller.CustomerController   : Customer registration successful for ID: 5
+2025-10-27T09:05:45.351+05:30  INFO 4628 --- [loms] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-10-27T09:05:45.360+05:30  INFO 4628 --- [loms] [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-27T09:05:45.377+05:30  INFO 4628 --- [loms] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-27T09:05:45.386+05:30  INFO 4628 --- [loms] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-27T09:05:45.391+05:30  INFO 4628 --- [loms] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-27T09:05:45.413+05:30  INFO 4628 --- [loms] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-27T09:05:45.556+05:30  INFO 4628 --- [loms] [restartedMain] com.genc.loms.LomsApplication            : Starting LomsApplication using Java 21.0.7 with PID 4628 (C:\Users\2442579\eclipse-workspace\lomsVinay\target\classes started by 2442579 in C:\Users\2442579\eclipse-workspace\lomsVinay)
+2025-10-27T09:05:45.557+05:30  INFO 4628 --- [loms] [restartedMain] com.genc.loms.LomsApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-10-27T09:05:46.188+05:30  INFO 4628 --- [loms] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-27T09:05:46.262+05:30  INFO 4628 --- [loms] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 71 ms. Found 6 JPA repository interfaces.
+2025-10-27T09:05:46.499+05:30  INFO 4628 --- [loms] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2025-10-27T09:05:46.507+05:30  INFO 4628 --- [loms] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-27T09:05:46.508+05:30  INFO 4628 --- [loms] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-27T09:05:46.605+05:30  INFO 4628 --- [loms] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-27T09:05:46.606+05:30  INFO 4628 --- [loms] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1044 ms
+2025-10-27T09:05:46.702+05:30  INFO 4628 --- [loms] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-27T09:05:46.712+05:30  INFO 4628 --- [loms] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-27T09:05:46.743+05:30  INFO 4628 --- [loms] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-27T09:05:46.745+05:30  INFO 4628 --- [loms] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-10-27T09:05:46.785+05:30  INFO 4628 --- [loms] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2367a822
+2025-10-27T09:05:46.785+05:30  INFO 4628 --- [loms] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-10-27T09:05:46.788+05:30  INFO 4628 --- [loms] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 8.0.43
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-27T09:05:47.110+05:30  INFO 4628 --- [loms] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-27T09:05:47.237+05:30  INFO 4628 --- [loms] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-27T09:05:47.690+05:30  WARN 4628 --- [loms] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-27T09:05:47.703+05:30  INFO 4628 --- [loms] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-10-27T09:05:47.873+05:30  WARN 4628 --- [loms] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-10-27T09:05:47.995+05:30  INFO 4628 --- [loms] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-27T09:05:48.017+05:30  INFO 4628 --- [loms] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2025-10-27T09:05:48.023+05:30  INFO 4628 --- [loms] [restartedMain] com.genc.loms.LomsApplication            : Started LomsApplication in 2.516 seconds (process running for 97.812)
+2025-10-27T09:05:48.026+05:30  INFO 4628 --- [loms] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-27T09:20:02.492+05:30  INFO 4628 --- [loms] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-10-27T09:20:02.500+05:30  INFO 4628 --- [loms] [Thread-7] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-27T09:20:02.511+05:30  INFO 4628 --- [loms] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-27T09:20:02.516+05:30  INFO 4628 --- [loms] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-27T09:20:02.520+05:30  INFO 4628 --- [loms] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-10-27T09:20:02.525+05:30  INFO 4628 --- [loms] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-10-27T09:20:02.642+05:30  INFO 4628 --- [loms] [restartedMain] com.genc.loms.LomsApplication            : Starting LomsApplication using Java 21.0.7 with PID 4628 (C:\Users\2442579\eclipse-workspace\lomsVinay\target\classes started by 2442579 in C:\Users\2442579\eclipse-workspace\lomsVinay)
+2025-10-27T09:20:02.642+05:30  INFO 4628 --- [loms] [restartedMain] com.genc.loms.LomsApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-10-27T09:20:03.440+05:30  INFO 4628 --- [loms] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-27T09:20:03.481+05:30  INFO 4628 --- [loms] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 6 JPA repository interfaces.
+2025-10-27T09:20:03.676+05:30  INFO 4628 --- [loms] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2025-10-27T09:20:03.679+05:30  INFO 4628 --- [loms] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-27T09:20:03.680+05:30  INFO 4628 --- [loms] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-27T09:20:03.741+05:30  INFO 4628 --- [loms] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-27T09:20:03.741+05:30  INFO 4628 --- [loms] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1095 ms
+2025-10-27T09:20:03.805+05:30  INFO 4628 --- [loms] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-27T09:20:03.809+05:30  INFO 4628 --- [loms] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-27T09:20:03.823+05:30  INFO 4628 --- [loms] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-27T09:20:03.825+05:30  INFO 4628 --- [loms] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2025-10-27T09:20:03.862+05:30  INFO 4628 --- [loms] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@34f5a0ec
+2025-10-27T09:20:03.863+05:30  INFO 4628 --- [loms] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2025-10-27T09:20:03.866+05:30  INFO 4628 --- [loms] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 8.0.43
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-27T09:20:04.045+05:30  INFO 4628 --- [loms] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-27T09:20:04.135+05:30  INFO 4628 --- [loms] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-27T09:20:04.326+05:30  WARN 4628 --- [loms] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-27T09:20:04.337+05:30  INFO 4628 --- [loms] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-10-27T09:20:04.395+05:30  WARN 4628 --- [loms] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-10-27T09:20:04.473+05:30  INFO 4628 --- [loms] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-27T09:20:04.485+05:30  INFO 4628 --- [loms] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2025-10-27T09:20:04.489+05:30  INFO 4628 --- [loms] [restartedMain] com.genc.loms.LomsApplication            : Started LomsApplication in 1.877 seconds (process running for 954.279)
+2025-10-27T09:20:04.491+05:30  INFO 4628 --- [loms] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-27T09:20:16.213+05:30  INFO 4628 --- [loms] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-10-27T09:20:16.215+05:30  INFO 4628 --- [loms] [Thread-11] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-27T09:20:16.224+05:30  INFO 4628 --- [loms] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-27T09:20:16.226+05:30  INFO 4628 --- [loms] [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-27T09:20:16.227+05:30  INFO 4628 --- [loms] [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2025-10-27T09:20:16.233+05:30  INFO 4628 --- [loms] [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2025-10-27T09:20:16.312+05:30  INFO 4628 --- [loms] [restartedMain] com.genc.loms.LomsApplication            : Starting LomsApplication using Java 21.0.7 with PID 4628 (C:\Users\2442579\eclipse-workspace\lomsVinay\target\classes started by 2442579 in C:\Users\2442579\eclipse-workspace\lomsVinay)
+2025-10-27T09:20:16.313+05:30  INFO 4628 --- [loms] [restartedMain] com.genc.loms.LomsApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-10-27T09:20:30.280+05:30  INFO 4628 --- [loms] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-27T09:20:30.297+05:30  INFO 4628 --- [loms] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 6 JPA repository interfaces.
+2025-10-27T09:20:30.352+05:30  INFO 4628 --- [loms] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2025-10-27T09:20:30.353+05:30  INFO 4628 --- [loms] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-27T09:20:30.353+05:30  INFO 4628 --- [loms] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-27T09:20:30.372+05:30  INFO 4628 --- [loms] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-27T09:20:30.372+05:30  INFO 4628 --- [loms] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 14056 ms
+2025-10-27T09:20:30.395+05:30  INFO 4628 --- [loms] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-27T09:20:30.398+05:30  INFO 4628 --- [loms] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-27T09:20:30.404+05:30  INFO 4628 --- [loms] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-27T09:20:30.405+05:30  INFO 4628 --- [loms] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2025-10-27T09:20:30.416+05:30  INFO 4628 --- [loms] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2364b1cd
+2025-10-27T09:20:30.416+05:30  INFO 4628 --- [loms] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2025-10-27T09:20:30.417+05:30  INFO 4628 --- [loms] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-4)']
+	Database driver: undefined/unknown
+	Database version: 8.0.43
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-27T09:20:30.504+05:30  INFO 4628 --- [loms] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-27T09:20:30.553+05:30  INFO 4628 --- [loms] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-27T09:20:30.649+05:30  WARN 4628 --- [loms] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-27T09:20:30.652+05:30  INFO 4628 --- [loms] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-10-27T09:20:30.687+05:30  WARN 4628 --- [loms] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-10-27T09:20:30.712+05:30  INFO 4628 --- [loms] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-27T09:20:30.722+05:30  INFO 4628 --- [loms] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2025-10-27T09:20:30.724+05:30  INFO 4628 --- [loms] [restartedMain] com.genc.loms.LomsApplication            : Started LomsApplication in 14.436 seconds (process running for 980.514)
+2025-10-27T09:20:30.726+05:30  INFO 4628 --- [loms] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-27T09:23:01.795+05:30  INFO 4628 --- [loms] [http-nio-8082-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-27T09:23:01.795+05:30  INFO 4628 --- [loms] [http-nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-27T09:23:01.795+05:30  INFO 4628 --- [loms] [http-nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-10-27T09:23:54.253+05:30  INFO 4628 --- [loms] [RMI TCP Connection(24)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-10-27T09:23:54.254+05:30  INFO 4628 --- [loms] [RMI TCP Connection(24)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-27T09:23:54.269+05:30  INFO 4628 --- [loms] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-27T09:23:54.271+05:30  INFO 4628 --- [loms] [RMI TCP Connection(24)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-27T09:23:54.272+05:30  INFO 4628 --- [loms] [RMI TCP Connection(24)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2025-10-27T09:23:54.275+05:30  INFO 4628 --- [loms] [RMI TCP Connection(24)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2025-10-27T09:23:59.424+05:30  INFO 14068 --- [loms] [restartedMain] com.genc.loms.LomsApplication            : Starting LomsApplication using Java 21.0.7 with PID 14068 (C:\Users\2442579\eclipse-workspace\lomsVinay\target\classes started by 2442579 in C:\Users\2442579\eclipse-workspace\lomsVinay)
+2025-10-27T09:23:59.426+05:30  INFO 14068 --- [loms] [restartedMain] com.genc.loms.LomsApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-10-27T09:23:59.475+05:30  INFO 14068 --- [loms] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-27T09:23:59.475+05:30  INFO 14068 --- [loms] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-27T09:24:00.247+05:30  INFO 14068 --- [loms] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-27T09:24:00.309+05:30  INFO 14068 --- [loms] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 6 JPA repository interfaces.
+2025-10-27T09:24:00.876+05:30  INFO 14068 --- [loms] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2025-10-27T09:24:00.892+05:30  INFO 14068 --- [loms] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-27T09:24:00.893+05:30  INFO 14068 --- [loms] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-27T09:24:00.964+05:30  INFO 14068 --- [loms] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-27T09:24:00.965+05:30  INFO 14068 --- [loms] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1488 ms
+2025-10-27T09:24:01.159+05:30  INFO 14068 --- [loms] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-27T09:24:01.290+05:30  INFO 14068 --- [loms] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-27T09:24:01.371+05:30  INFO 14068 --- [loms] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-27T09:24:01.802+05:30  INFO 14068 --- [loms] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-27T09:24:01.852+05:30  INFO 14068 --- [loms] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-27T09:24:02.251+05:30  INFO 14068 --- [loms] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@74328d9
+2025-10-27T09:24:02.253+05:30  INFO 14068 --- [loms] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-27T09:24:02.395+05:30  INFO 14068 --- [loms] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.43
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-27T09:24:03.792+05:30  INFO 14068 --- [loms] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-27T09:24:03.955+05:30  INFO 14068 --- [loms] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-27T09:24:04.334+05:30  INFO 14068 --- [loms] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-27T09:24:05.167+05:30  WARN 14068 --- [loms] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-27T09:24:05.200+05:30  INFO 14068 --- [loms] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-10-27T09:24:05.510+05:30  WARN 14068 --- [loms] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-10-27T09:24:05.747+05:30  INFO 14068 --- [loms] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-27T09:24:05.795+05:30  INFO 14068 --- [loms] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2025-10-27T09:24:05.814+05:30  INFO 14068 --- [loms] [restartedMain] com.genc.loms.LomsApplication            : Started LomsApplication in 6.818 seconds (process running for 7.77)
+2025-10-27T09:24:08.179+05:30  INFO 14068 --- [loms] [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-27T09:24:08.180+05:30  INFO 14068 --- [loms] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-27T09:24:08.182+05:30  INFO 14068 --- [loms] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-10-27T09:24:34.821+05:30  INFO 14068 --- [loms] [http-nio-8082-exec-2] c.g.loms.controller.CustomerController   : Received request to register a new customer: vinay@gmail.com
+2025-10-27T09:24:34.933+05:30 ERROR 14068 --- [loms] [http-nio-8082-exec-2] c.g.loms.controller.CustomerController   : Error during customer registration for email: vinay@gmail.com. Exception: Email Id Already Exist
+
+javax.management.RuntimeErrorException: Email Id Already Exist
+	at com.genc.loms.service.CustomerService.registeCustomer(CustomerService.java:29) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:724) ~[spring-aop-6.2.11.jar:6.2.11]
+	at com.genc.loms.service.CustomerService$$SpringCGLIB$$0.registeCustomer(<generated>) ~[classes/:na]
+	at com.genc.loms.controller.CustomerController.registerCustomer(CustomerController.java:47) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.46.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.46.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:66) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1776) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:975) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:493) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2025-10-27T09:39:55.439+05:30  WARN 14068 --- [loms] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=12m53s53ms828µs).
+2025-10-27T09:53:51.768+05:30  WARN 14068 --- [loms] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m26s117ms534µs600ns).
+2025-10-27T10:02:07.441+05:30  INFO 14068 --- [loms] [RMI TCP Connection(29)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-10-27T10:02:07.453+05:30  INFO 14068 --- [loms] [RMI TCP Connection(29)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-27T10:02:07.472+05:30  INFO 14068 --- [loms] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-27T10:02:07.481+05:30  INFO 14068 --- [loms] [RMI TCP Connection(29)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-27T10:02:07.490+05:30  INFO 14068 --- [loms] [RMI TCP Connection(29)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-27T10:02:07.494+05:30  INFO 14068 --- [loms] [RMI TCP Connection(29)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-27T11:38:17.391+05:30  INFO 9184 --- [loms] [restartedMain] com.genc.loms.LomsApplication            : Starting LomsApplication using Java 21.0.7 with PID 9184 (C:\Users\2442579\eclipse-workspace\lomsVinay\target\classes started by 2442579 in C:\Users\2442579\eclipse-workspace\lomsVinay)
+2025-10-27T11:38:17.393+05:30  INFO 9184 --- [loms] [restartedMain] com.genc.loms.LomsApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-10-27T11:38:17.456+05:30  INFO 9184 --- [loms] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-27T11:38:17.457+05:30  INFO 9184 --- [loms] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-27T11:38:18.885+05:30  INFO 9184 --- [loms] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-27T11:38:18.979+05:30  INFO 9184 --- [loms] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 81 ms. Found 6 JPA repository interfaces.
+2025-10-27T11:38:19.516+05:30  INFO 9184 --- [loms] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2025-10-27T11:38:19.530+05:30  INFO 9184 --- [loms] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-27T11:38:19.530+05:30  INFO 9184 --- [loms] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-27T11:38:19.587+05:30  INFO 9184 --- [loms] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-27T11:38:19.588+05:30  INFO 9184 --- [loms] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2130 ms
+2025-10-27T11:38:19.754+05:30  INFO 9184 --- [loms] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-27T11:38:19.808+05:30  INFO 9184 --- [loms] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-27T11:38:19.862+05:30  INFO 9184 --- [loms] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-27T11:38:20.229+05:30  INFO 9184 --- [loms] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-27T11:38:20.269+05:30  INFO 9184 --- [loms] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-27T11:38:20.858+05:30  INFO 9184 --- [loms] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@43e7f2ca
+2025-10-27T11:38:20.860+05:30  INFO 9184 --- [loms] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-27T11:38:21.001+05:30  INFO 9184 --- [loms] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.43
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-27T11:38:22.305+05:30  INFO 9184 --- [loms] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-27T11:38:22.490+05:30  INFO 9184 --- [loms] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-27T11:38:22.825+05:30  INFO 9184 --- [loms] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-27T11:38:23.709+05:30  WARN 9184 --- [loms] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-27T11:38:23.742+05:30  INFO 9184 --- [loms] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-10-27T11:38:23.986+05:30  WARN 9184 --- [loms] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-10-27T11:38:24.201+05:30  INFO 9184 --- [loms] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-27T11:38:24.245+05:30  INFO 9184 --- [loms] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2025-10-27T11:38:24.254+05:30  INFO 9184 --- [loms] [restartedMain] com.genc.loms.LomsApplication            : Started LomsApplication in 7.44 seconds (process running for 8.358)
+2025-10-27T11:38:27.074+05:30  INFO 9184 --- [loms] [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-27T11:38:27.075+05:30  INFO 9184 --- [loms] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-27T11:38:27.076+05:30  INFO 9184 --- [loms] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-27T11:38:41.826+05:30  INFO 9184 --- [loms] [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-10-27T11:38:41.830+05:30  INFO 9184 --- [loms] [RMI TCP Connection(2)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-27T11:38:41.850+05:30  INFO 9184 --- [loms] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-27T11:38:41.857+05:30  INFO 9184 --- [loms] [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-27T11:38:41.860+05:30  INFO 9184 --- [loms] [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-27T11:38:41.872+05:30  INFO 9184 --- [loms] [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-27T11:42:03.387+05:30  INFO 16224 --- [loms] [restartedMain] com.genc.loms.LomsApplication            : Starting LomsApplication using Java 21.0.7 with PID 16224 (C:\Users\2442579\eclipse-workspace\lomsVinay\target\classes started by 2442579 in C:\Users\2442579\eclipse-workspace\lomsVinay)
+2025-10-27T11:42:03.389+05:30  INFO 16224 --- [loms] [restartedMain] com.genc.loms.LomsApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-10-27T11:42:03.435+05:30  INFO 16224 --- [loms] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-27T11:42:03.435+05:30  INFO 16224 --- [loms] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-27T11:42:04.749+05:30  INFO 16224 --- [loms] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-27T11:42:04.823+05:30  INFO 16224 --- [loms] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64 ms. Found 6 JPA repository interfaces.
+2025-10-27T11:42:05.279+05:30  INFO 16224 --- [loms] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2025-10-27T11:42:05.292+05:30  INFO 16224 --- [loms] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-27T11:42:05.293+05:30  INFO 16224 --- [loms] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-27T11:42:05.342+05:30  INFO 16224 --- [loms] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-27T11:42:05.342+05:30  INFO 16224 --- [loms] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1907 ms
+2025-10-27T11:42:05.501+05:30  INFO 16224 --- [loms] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-27T11:42:05.548+05:30  INFO 16224 --- [loms] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-27T11:42:05.589+05:30  INFO 16224 --- [loms] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-27T11:42:05.833+05:30  INFO 16224 --- [loms] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-27T11:42:05.860+05:30  INFO 16224 --- [loms] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-27T11:42:06.153+05:30  INFO 16224 --- [loms] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@9aee17d
+2025-10-27T11:42:06.154+05:30  INFO 16224 --- [loms] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-27T11:42:06.228+05:30  INFO 16224 --- [loms] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.43
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-27T11:42:07.369+05:30  INFO 16224 --- [loms] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-27T11:42:07.447+05:30  INFO 16224 --- [loms] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-27T11:42:07.705+05:30  INFO 16224 --- [loms] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-27T11:42:08.379+05:30  WARN 16224 --- [loms] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-27T11:42:08.399+05:30  INFO 16224 --- [loms] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-10-27T11:42:08.604+05:30  WARN 16224 --- [loms] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-10-27T11:42:08.791+05:30  INFO 16224 --- [loms] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-27T11:42:08.831+05:30  INFO 16224 --- [loms] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2025-10-27T11:42:08.839+05:30  INFO 16224 --- [loms] [restartedMain] com.genc.loms.LomsApplication            : Started LomsApplication in 5.956 seconds (process running for 6.918)
+2025-10-27T11:42:14.829+05:30  INFO 16224 --- [loms] [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-27T11:42:14.829+05:30  INFO 16224 --- [loms] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-27T11:42:14.830+05:30  INFO 16224 --- [loms] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-10-27T11:42:26.096+05:30  INFO 16224 --- [loms] [http-nio-8082-exec-2] c.g.loms.controller.CustomerController   : Login attempt for email: vinay@gmail.com
+2025-10-27T11:42:26.201+05:30  INFO 16224 --- [loms] [http-nio-8082-exec-2] c.g.loms.controller.CustomerController   : Customer login successful for ID: 1
+2025-10-27T11:42:31.757+05:30  INFO 16224 --- [loms] [http-nio-8082-exec-6] c.g.l.c.CreditEvaluationController       : Received request to evaluate credit score.
+2025-10-27T11:42:31.757+05:30  INFO 16224 --- [loms] [http-nio-8082-exec-6] c.g.l.c.CreditEvaluationController       : Starting credit score evaluation for customerId: 1
+2025-10-27T11:42:31.918+05:30  INFO 16224 --- [loms] [http-nio-8082-exec-6] c.g.l.c.CreditEvaluationController       : Successfully evaluated and recorded credit score for customerId: 1. Score: 350
+2025-10-27T11:43:11.259+05:30  INFO 16224 --- [loms] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2025-10-27T11:43:11.268+05:30  INFO 16224 --- [loms] [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-27T11:43:11.289+05:30  INFO 16224 --- [loms] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-27T11:43:11.296+05:30  INFO 16224 --- [loms] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-27T11:43:11.304+05:30  INFO 16224 --- [loms] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-27T11:43:11.324+05:30  INFO 16224 --- [loms] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-27T11:43:11.507+05:30  INFO 16224 --- [loms] [restartedMain] com.genc.loms.LomsApplication            : Starting LomsApplication using Java 21.0.7 with PID 16224 (C:\Users\2442579\eclipse-workspace\lomsVinay\target\classes started by 2442579 in C:\Users\2442579\eclipse-workspace\lomsVinay)
+2025-10-27T11:43:11.507+05:30  INFO 16224 --- [loms] [restartedMain] com.genc.loms.LomsApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-10-27T11:43:12.083+05:30  INFO 16224 --- [loms] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-27T11:43:12.131+05:30  INFO 16224 --- [loms] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 6 JPA repository interfaces.
+2025-10-27T11:43:12.361+05:30  INFO 16224 --- [loms] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2025-10-27T11:43:12.362+05:30  INFO 16224 --- [loms] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-27T11:43:12.363+05:30  INFO 16224 --- [loms] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-27T11:43:12.454+05:30  INFO 16224 --- [loms] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-27T11:43:12.454+05:30  INFO 16224 --- [loms] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 943 ms
+2025-10-27T11:43:12.595+05:30  INFO 16224 --- [loms] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-27T11:43:12.611+05:30  INFO 16224 --- [loms] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-27T11:43:12.658+05:30  INFO 16224 --- [loms] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-27T11:43:12.659+05:30  INFO 16224 --- [loms] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-10-27T11:43:12.697+05:30  INFO 16224 --- [loms] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3e05b1a0
+2025-10-27T11:43:12.698+05:30  INFO 16224 --- [loms] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-10-27T11:43:12.701+05:30  INFO 16224 --- [loms] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 8.0.43
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-27T11:43:13.102+05:30  INFO 16224 --- [loms] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-27T11:43:13.175+05:30  INFO 16224 --- [loms] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-27T11:43:13.634+05:30  WARN 16224 --- [loms] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-27T11:43:13.663+05:30  INFO 16224 --- [loms] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-10-27T11:43:13.806+05:30  WARN 16224 --- [loms] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-10-27T11:43:13.915+05:30  INFO 16224 --- [loms] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-27T11:43:13.952+05:30  INFO 16224 --- [loms] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2025-10-27T11:43:13.960+05:30  INFO 16224 --- [loms] [restartedMain] com.genc.loms.LomsApplication            : Started LomsApplication in 2.523 seconds (process running for 72.039)
+2025-10-27T11:43:13.966+05:30  INFO 16224 --- [loms] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-27T11:43:14.010+05:30  INFO 16224 --- [loms] [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-27T11:43:14.010+05:30  INFO 16224 --- [loms] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-27T11:43:14.012+05:30  INFO 16224 --- [loms] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-10-27T11:43:15.988+05:30  INFO 16224 --- [loms] [http-nio-8082-exec-2] c.g.l.c.CreditEvaluationController       : Received request to evaluate credit score.
+2025-10-27T11:43:15.988+05:30  INFO 16224 --- [loms] [http-nio-8082-exec-2] c.g.l.c.CreditEvaluationController       : Starting credit score evaluation for customerId: 1
+2025-10-27T11:43:16.024+05:30  INFO 16224 --- [loms] [http-nio-8082-exec-2] c.g.l.c.CreditEvaluationController       : Successfully evaluated and recorded credit score for customerId: 1. Score: 350
+2025-10-27T11:43:26.541+05:30  INFO 16224 --- [loms] [RMI TCP Connection(5)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-10-27T11:43:26.541+05:30  INFO 16224 --- [loms] [RMI TCP Connection(5)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-27T11:43:26.541+05:30  INFO 16224 --- [loms] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-27T11:43:26.557+05:30  INFO 16224 --- [loms] [RMI TCP Connection(5)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-27T11:43:26.557+05:30  INFO 16224 --- [loms] [RMI TCP Connection(5)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-10-27T11:43:26.557+05:30  INFO 16224 --- [loms] [RMI TCP Connection(5)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-10-27T11:43:29.033+05:30  INFO 24260 --- [loms] [restartedMain] com.genc.loms.LomsApplication            : Starting LomsApplication using Java 21.0.7 with PID 24260 (C:\Users\2442579\eclipse-workspace\lomsVinay\target\classes started by 2442579 in C:\Users\2442579\eclipse-workspace\lomsVinay)
+2025-10-27T11:43:29.035+05:30  INFO 24260 --- [loms] [restartedMain] com.genc.loms.LomsApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-10-27T11:43:29.081+05:30  INFO 24260 --- [loms] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-27T11:43:29.082+05:30  INFO 24260 --- [loms] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-27T11:43:29.898+05:30  INFO 24260 --- [loms] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-27T11:43:29.959+05:30  INFO 24260 --- [loms] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 6 JPA repository interfaces.
+2025-10-27T11:43:30.355+05:30  INFO 24260 --- [loms] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2025-10-27T11:43:30.366+05:30  INFO 24260 --- [loms] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-27T11:43:30.367+05:30  INFO 24260 --- [loms] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-27T11:43:30.421+05:30  INFO 24260 --- [loms] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-27T11:43:30.422+05:30  INFO 24260 --- [loms] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1340 ms
+2025-10-27T11:43:30.558+05:30  INFO 24260 --- [loms] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-27T11:43:30.600+05:30  INFO 24260 --- [loms] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-27T11:43:30.642+05:30  INFO 24260 --- [loms] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-27T11:43:30.871+05:30  INFO 24260 --- [loms] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-27T11:43:30.897+05:30  INFO 24260 --- [loms] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-27T11:43:31.176+05:30  INFO 24260 --- [loms] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@62ed01ee
+2025-10-27T11:43:31.178+05:30  INFO 24260 --- [loms] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-27T11:43:31.247+05:30  INFO 24260 --- [loms] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.43
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-27T11:43:32.183+05:30  INFO 24260 --- [loms] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-27T11:43:32.295+05:30  INFO 24260 --- [loms] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-27T11:43:32.565+05:30  INFO 24260 --- [loms] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-27T11:43:33.192+05:30  WARN 24260 --- [loms] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-27T11:43:33.212+05:30  INFO 24260 --- [loms] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-10-27T11:43:33.462+05:30  WARN 24260 --- [loms] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-10-27T11:43:33.696+05:30  INFO 24260 --- [loms] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-27T11:43:33.740+05:30  INFO 24260 --- [loms] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2025-10-27T11:43:33.750+05:30  INFO 24260 --- [loms] [restartedMain] com.genc.loms.LomsApplication            : Started LomsApplication in 5.091 seconds (process running for 5.789)
+2025-10-27T11:43:41.142+05:30  INFO 24260 --- [loms] [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-27T11:43:41.142+05:30  INFO 24260 --- [loms] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-27T11:43:41.144+05:30  INFO 24260 --- [loms] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-27T11:43:49.117+05:30  INFO 24260 --- [loms] [http-nio-8082-exec-5] c.g.loms.controller.CustomerController   : Login attempt for email: vinay@gmail.com
+2025-10-27T11:43:49.227+05:30  INFO 24260 --- [loms] [http-nio-8082-exec-5] c.g.loms.controller.CustomerController   : Customer login successful for ID: 1
+2025-10-27T11:43:55.347+05:30  INFO 24260 --- [loms] [http-nio-8082-exec-6] c.g.l.c.CreditEvaluationController       : Received request to evaluate credit score.
+2025-10-27T11:43:55.347+05:30  INFO 24260 --- [loms] [http-nio-8082-exec-6] c.g.l.c.CreditEvaluationController       : Starting credit score evaluation for customerId: 1
+2025-10-27T11:43:55.425+05:30  INFO 24260 --- [loms] [http-nio-8082-exec-6] c.g.l.c.CreditEvaluationController       : Successfully evaluated and recorded credit score for customerId: 1. Score: 350
+2025-10-27T11:43:56.844+05:30  INFO 24260 --- [loms] [http-nio-8082-exec-3] c.g.l.c.CreditEvaluationController       : Received request to evaluate credit score.
+2025-10-27T11:43:56.844+05:30  INFO 24260 --- [loms] [http-nio-8082-exec-3] c.g.l.c.CreditEvaluationController       : Starting credit score evaluation for customerId: 1
+2025-10-27T11:43:56.861+05:30  INFO 24260 --- [loms] [http-nio-8082-exec-3] c.g.l.c.CreditEvaluationController       : Successfully evaluated and recorded credit score for customerId: 1. Score: 350
+2025-10-27T11:43:57.626+05:30  INFO 24260 --- [loms] [http-nio-8082-exec-7] c.g.l.c.CreditEvaluationController       : Received request to evaluate credit score.
+2025-10-27T11:43:57.626+05:30  INFO 24260 --- [loms] [http-nio-8082-exec-7] c.g.l.c.CreditEvaluationController       : Starting credit score evaluation for customerId: 1
+2025-10-27T11:43:57.640+05:30  INFO 24260 --- [loms] [http-nio-8082-exec-7] c.g.l.c.CreditEvaluationController       : Successfully evaluated and recorded credit score for customerId: 1. Score: 350
+2025-10-27T11:43:57.808+05:30  INFO 24260 --- [loms] [http-nio-8082-exec-9] c.g.l.c.CreditEvaluationController       : Received request to evaluate credit score.
+2025-10-27T11:43:57.808+05:30  INFO 24260 --- [loms] [http-nio-8082-exec-9] c.g.l.c.CreditEvaluationController       : Starting credit score evaluation for customerId: 1
+2025-10-27T11:43:57.823+05:30  INFO 24260 --- [loms] [http-nio-8082-exec-9] c.g.l.c.CreditEvaluationController       : Successfully evaluated and recorded credit score for customerId: 1. Score: 350
+2025-10-27T11:43:58.067+05:30  INFO 24260 --- [loms] [http-nio-8082-exec-8] c.g.l.c.CreditEvaluationController       : Received request to evaluate credit score.
+2025-10-27T11:43:58.067+05:30  INFO 24260 --- [loms] [http-nio-8082-exec-8] c.g.l.c.CreditEvaluationController       : Starting credit score evaluation for customerId: 1
+2025-10-27T11:43:58.082+05:30  INFO 24260 --- [loms] [http-nio-8082-exec-8] c.g.l.c.CreditEvaluationController       : Successfully evaluated and recorded credit score for customerId: 1. Score: 350
+2025-10-27T11:43:58.282+05:30  INFO 24260 --- [loms] [http-nio-8082-exec-10] c.g.l.c.CreditEvaluationController       : Received request to evaluate credit score.
+2025-10-27T11:43:58.282+05:30  INFO 24260 --- [loms] [http-nio-8082-exec-10] c.g.l.c.CreditEvaluationController       : Starting credit score evaluation for customerId: 1
+2025-10-27T11:43:58.301+05:30  INFO 24260 --- [loms] [http-nio-8082-exec-10] c.g.l.c.CreditEvaluationController       : Successfully evaluated and recorded credit score for customerId: 1. Score: 350
+2025-10-27T11:46:42.498+05:30  INFO 24260 --- [loms] [RMI TCP Connection(6)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-10-27T11:46:42.501+05:30  INFO 24260 --- [loms] [RMI TCP Connection(6)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-27T11:46:42.511+05:30  INFO 24260 --- [loms] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-27T11:46:42.517+05:30  INFO 24260 --- [loms] [RMI TCP Connection(6)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-27T11:46:42.520+05:30  INFO 24260 --- [loms] [RMI TCP Connection(6)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-27T11:46:42.524+05:30  INFO 24260 --- [loms] [RMI TCP Connection(6)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-27T11:46:45.023+05:30  INFO 24412 --- [loms] [restartedMain] com.genc.loms.LomsApplication            : Starting LomsApplication using Java 21.0.7 with PID 24412 (C:\Users\2442579\eclipse-workspace\lomsVinay\target\classes started by 2442579 in C:\Users\2442579\eclipse-workspace\lomsVinay)
+2025-10-27T11:46:45.025+05:30  INFO 24412 --- [loms] [restartedMain] com.genc.loms.LomsApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-10-27T11:46:45.072+05:30  INFO 24412 --- [loms] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-27T11:46:45.073+05:30  INFO 24412 --- [loms] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-27T11:46:45.906+05:30  INFO 24412 --- [loms] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-27T11:46:45.975+05:30  INFO 24412 --- [loms] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57 ms. Found 6 JPA repository interfaces.
+2025-10-27T11:46:46.449+05:30  INFO 24412 --- [loms] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2025-10-27T11:46:46.461+05:30  INFO 24412 --- [loms] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-27T11:46:46.462+05:30  INFO 24412 --- [loms] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-27T11:46:46.520+05:30  INFO 24412 --- [loms] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-27T11:46:46.520+05:30  INFO 24412 --- [loms] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1447 ms
+2025-10-27T11:46:46.691+05:30  INFO 24412 --- [loms] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-27T11:46:46.743+05:30  INFO 24412 --- [loms] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-27T11:46:46.799+05:30  INFO 24412 --- [loms] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-27T11:46:47.075+05:30  INFO 24412 --- [loms] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-27T11:46:47.108+05:30  INFO 24412 --- [loms] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-27T11:46:47.483+05:30  INFO 24412 --- [loms] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@747947e3
+2025-10-27T11:46:47.486+05:30  INFO 24412 --- [loms] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-27T11:46:47.579+05:30  INFO 24412 --- [loms] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.43
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-27T11:46:48.707+05:30  INFO 24412 --- [loms] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-27T11:46:48.814+05:30  INFO 24412 --- [loms] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-27T11:46:49.114+05:30  INFO 24412 --- [loms] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-27T11:46:49.731+05:30  WARN 24412 --- [loms] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-27T11:46:49.752+05:30  INFO 24412 --- [loms] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-10-27T11:46:49.962+05:30  WARN 24412 --- [loms] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-10-27T11:46:50.158+05:30  INFO 24412 --- [loms] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-27T11:46:50.199+05:30  INFO 24412 --- [loms] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2025-10-27T11:46:50.206+05:30  INFO 24412 --- [loms] [restartedMain] com.genc.loms.LomsApplication            : Started LomsApplication in 5.614 seconds (process running for 6.361)
+2025-10-27T11:46:51.932+05:30  INFO 24412 --- [loms] [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-27T11:46:51.933+05:30  INFO 24412 --- [loms] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-27T11:46:51.934+05:30  INFO 24412 --- [loms] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-27T11:46:59.020+05:30  INFO 24412 --- [loms] [http-nio-8082-exec-2] c.g.loms.controller.CustomerController   : Login attempt for email: vinay@gmail.com
+2025-10-27T11:46:59.140+05:30  INFO 24412 --- [loms] [http-nio-8082-exec-2] c.g.loms.controller.CustomerController   : Customer login successful for ID: 1
+2025-10-27T11:47:03.928+05:30  INFO 24412 --- [loms] [http-nio-8082-exec-5] c.g.l.c.CreditEvaluationController       : Received request to evaluate credit score.
+2025-10-27T11:47:03.928+05:30  INFO 24412 --- [loms] [http-nio-8082-exec-5] c.g.l.c.CreditEvaluationController       : Starting credit score evaluation for customerId: 1
+2025-10-27T11:47:04.015+05:30  INFO 24412 --- [loms] [http-nio-8082-exec-5] c.g.l.c.CreditEvaluationController       : Successfully evaluated and recorded credit score for customerId: 1. Score: 350
+2025-10-27T11:47:51.584+05:30  INFO 24412 --- [loms] [http-nio-8082-exec-7] c.genc.loms.controller.UserController    : Received POST request for login attempt by username: admin
+2025-10-27T11:47:51.605+05:30  INFO 24412 --- [loms] [http-nio-8082-exec-7] c.genc.loms.controller.UserController    : User admin logged in successfully. Session created.
+2025-10-27T11:50:19.297+05:30  INFO 24412 --- [loms] [RMI TCP Connection(8)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-10-27T11:50:19.299+05:30  INFO 24412 --- [loms] [RMI TCP Connection(8)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-27T11:50:19.307+05:30  INFO 24412 --- [loms] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-27T11:50:19.311+05:30  INFO 24412 --- [loms] [RMI TCP Connection(8)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-27T11:50:19.314+05:30  INFO 24412 --- [loms] [RMI TCP Connection(8)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-27T11:50:19.318+05:30  INFO 24412 --- [loms] [RMI TCP Connection(8)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-27T11:50:21.541+05:30  INFO 25128 --- [loms] [restartedMain] com.genc.loms.LomsApplication            : Starting LomsApplication using Java 21.0.7 with PID 25128 (C:\Users\2442579\eclipse-workspace\lomsVinay\target\classes started by 2442579 in C:\Users\2442579\eclipse-workspace\lomsVinay)
+2025-10-27T11:50:21.543+05:30  INFO 25128 --- [loms] [restartedMain] com.genc.loms.LomsApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-10-27T11:50:21.580+05:30  INFO 25128 --- [loms] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-27T11:50:21.581+05:30  INFO 25128 --- [loms] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-27T11:50:22.206+05:30  INFO 25128 --- [loms] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-27T11:50:22.255+05:30  INFO 25128 --- [loms] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 6 JPA repository interfaces.
+2025-10-27T11:50:22.609+05:30  INFO 25128 --- [loms] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2025-10-27T11:50:22.620+05:30  INFO 25128 --- [loms] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-27T11:50:22.620+05:30  INFO 25128 --- [loms] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-27T11:50:22.660+05:30  INFO 25128 --- [loms] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-27T11:50:22.661+05:30  INFO 25128 --- [loms] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1079 ms
+2025-10-27T11:50:22.797+05:30  INFO 25128 --- [loms] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-27T11:50:22.837+05:30  INFO 25128 --- [loms] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-27T11:50:22.876+05:30  INFO 25128 --- [loms] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-27T11:50:23.054+05:30  INFO 25128 --- [loms] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-27T11:50:23.074+05:30  INFO 25128 --- [loms] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-27T11:50:23.368+05:30  INFO 25128 --- [loms] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@107d6e10
+2025-10-27T11:50:23.370+05:30  INFO 25128 --- [loms] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-27T11:50:23.442+05:30  INFO 25128 --- [loms] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.43
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-27T11:50:24.261+05:30  INFO 25128 --- [loms] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-27T11:50:24.337+05:30  INFO 25128 --- [loms] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-27T11:50:24.551+05:30  INFO 25128 --- [loms] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-27T11:50:25.073+05:30  WARN 25128 --- [loms] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-27T11:50:25.089+05:30  INFO 25128 --- [loms] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-10-27T11:50:25.252+05:30  WARN 25128 --- [loms] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-10-27T11:50:25.409+05:30  INFO 25128 --- [loms] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-27T11:50:25.463+05:30  INFO 25128 --- [loms] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2025-10-27T11:50:25.471+05:30  INFO 25128 --- [loms] [restartedMain] com.genc.loms.LomsApplication            : Started LomsApplication in 4.261 seconds (process running for 4.834)
+2025-10-27T11:50:29.491+05:30  INFO 25128 --- [loms] [http-nio-8082-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-27T11:50:29.491+05:30  INFO 25128 --- [loms] [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-27T11:50:29.494+05:30  INFO 25128 --- [loms] [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-10-27T11:50:36.916+05:30  INFO 25128 --- [loms] [http-nio-8082-exec-3] c.genc.loms.controller.UserController    : Received POST request for login attempt by username: admin
+2025-10-27T11:50:37.042+05:30  INFO 25128 --- [loms] [http-nio-8082-exec-3] c.genc.loms.controller.UserController    : User admin logged in successfully. Session created.
+2025-10-27T11:50:56.005+05:30  INFO 25128 --- [loms] [http-nio-8082-exec-7] c.g.l.c.LoanApplicationController        : Received request to retrieve all pending loan applications.
+2025-10-27T11:50:56.037+05:30  INFO 25128 --- [loms] [http-nio-8082-exec-7] c.g.l.c.LoanApplicationController        : Successfully retrieved 1 pending loan applications.
+2025-10-27T11:50:57.424+05:30  INFO 25128 --- [loms] [http-nio-8082-exec-10] c.g.l.c.LoanApplicationController        : Received request to retrieve all loan applications.
+2025-10-27T11:50:57.460+05:30  INFO 25128 --- [loms] [http-nio-8082-exec-10] c.g.l.c.LoanApplicationController        : Successfully retrieved 7 loan applications.
+2025-10-27T11:51:09.761+05:30  INFO 25128 --- [loms] [http-nio-8082-exec-3] c.g.l.c.LoanApplicationController        : Received request to retrieve all pending loan applications.
+2025-10-27T11:51:09.765+05:30  INFO 25128 --- [loms] [http-nio-8082-exec-3] c.g.l.c.LoanApplicationController        : Successfully retrieved 1 pending loan applications.
+2025-10-27T11:51:11.097+05:30  INFO 25128 --- [loms] [http-nio-8082-exec-6] c.g.l.c.LoanApplicationController        : Received request to retrieve all loan applications.
+2025-10-27T11:51:11.110+05:30  INFO 25128 --- [loms] [http-nio-8082-exec-6] c.g.l.c.LoanApplicationController        : Successfully retrieved 7 loan applications.
+2025-10-27T11:51:12.439+05:30  INFO 25128 --- [loms] [http-nio-8082-exec-7] c.g.l.c.LoanApplicationController        : Received request to retrieve all pending loan applications.
+2025-10-27T11:51:12.443+05:30  INFO 25128 --- [loms] [http-nio-8082-exec-7] c.g.l.c.LoanApplicationController        : Successfully retrieved 1 pending loan applications.
+2025-10-27T11:51:22.699+05:30  INFO 25128 --- [loms] [http-nio-8082-exec-1] c.g.l.c.LoanApplicationController        : Received request to retrieve all loan applications.
+2025-10-27T11:51:22.715+05:30  INFO 25128 --- [loms] [http-nio-8082-exec-1] c.g.l.c.LoanApplicationController        : Successfully retrieved 7 loan applications.
+2025-10-27T11:51:25.683+05:30  INFO 25128 --- [loms] [http-nio-8082-exec-3] c.g.l.c.LoanApplicationController        : Received request to retrieve all pending loan applications.
+2025-10-27T11:51:25.689+05:30  INFO 25128 --- [loms] [http-nio-8082-exec-3] c.g.l.c.LoanApplicationController        : Successfully retrieved 1 pending loan applications.
+2025-10-27T11:52:16.031+05:30  INFO 25128 --- [loms] [RMI TCP Connection(6)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-10-27T11:52:16.034+05:30  INFO 25128 --- [loms] [RMI TCP Connection(6)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-27T11:52:16.043+05:30  INFO 25128 --- [loms] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-27T11:52:16.047+05:30  INFO 25128 --- [loms] [RMI TCP Connection(6)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-27T11:52:16.049+05:30  INFO 25128 --- [loms] [RMI TCP Connection(6)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-27T11:52:16.053+05:30  INFO 25128 --- [loms] [RMI TCP Connection(6)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-27T11:52:18.446+05:30  INFO 24876 --- [loms] [restartedMain] com.genc.loms.LomsApplication            : Starting LomsApplication using Java 21.0.7 with PID 24876 (C:\Users\2442579\eclipse-workspace\lomsVinay\target\classes started by 2442579 in C:\Users\2442579\eclipse-workspace\lomsVinay)
+2025-10-27T11:52:18.448+05:30  INFO 24876 --- [loms] [restartedMain] com.genc.loms.LomsApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-10-27T11:52:18.501+05:30  INFO 24876 --- [loms] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-27T11:52:18.501+05:30  INFO 24876 --- [loms] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-27T11:52:19.152+05:30  INFO 24876 --- [loms] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-27T11:52:19.206+05:30  INFO 24876 --- [loms] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 6 JPA repository interfaces.
+2025-10-27T11:52:19.715+05:30  INFO 24876 --- [loms] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2025-10-27T11:52:19.730+05:30  INFO 24876 --- [loms] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-27T11:52:19.731+05:30  INFO 24876 --- [loms] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-27T11:52:19.791+05:30  INFO 24876 --- [loms] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-27T11:52:19.791+05:30  INFO 24876 --- [loms] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1289 ms
+2025-10-27T11:52:19.967+05:30  INFO 24876 --- [loms] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-27T11:52:20.018+05:30  INFO 24876 --- [loms] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-27T11:52:20.065+05:30  INFO 24876 --- [loms] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-27T11:52:20.320+05:30  INFO 24876 --- [loms] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-27T11:52:20.349+05:30  INFO 24876 --- [loms] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-27T11:52:20.659+05:30  INFO 24876 --- [loms] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2e63be2f
+2025-10-27T11:52:20.661+05:30  INFO 24876 --- [loms] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-27T11:52:20.732+05:30  INFO 24876 --- [loms] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.43
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-27T11:52:21.672+05:30  INFO 24876 --- [loms] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-27T11:52:21.770+05:30  INFO 24876 --- [loms] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-27T11:52:22.098+05:30  INFO 24876 --- [loms] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-27T11:52:22.798+05:30  WARN 24876 --- [loms] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-27T11:52:22.820+05:30  INFO 24876 --- [loms] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-10-27T11:52:23.032+05:30  WARN 24876 --- [loms] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-10-27T11:52:23.248+05:30  INFO 24876 --- [loms] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-27T11:52:23.310+05:30  INFO 24876 --- [loms] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2025-10-27T11:52:23.319+05:30  INFO 24876 --- [loms] [restartedMain] com.genc.loms.LomsApplication            : Started LomsApplication in 5.222 seconds (process running for 5.882)
+2025-10-27T11:54:52.765+05:30  INFO 24876 --- [loms] [RMI TCP Connection(6)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-10-27T11:54:52.769+05:30  INFO 24876 --- [loms] [RMI TCP Connection(6)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-27T11:54:52.771+05:30  INFO 24876 --- [loms] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-27T11:54:52.771+05:30  INFO 24876 --- [loms] [RMI TCP Connection(6)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-27T11:54:52.771+05:30  INFO 24876 --- [loms] [RMI TCP Connection(6)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-27T11:54:52.784+05:30  INFO 24876 --- [loms] [RMI TCP Connection(6)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

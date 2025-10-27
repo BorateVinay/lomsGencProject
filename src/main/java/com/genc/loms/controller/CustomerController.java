@@ -23,6 +23,7 @@ import com.genc.loms.service.CustomerService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
+import lombok.extern.slf4j.Slf4j;
 
 @RestController
 @CrossOrigin(origins = "*")
@@ -37,6 +38,7 @@ public class CustomerController {
 	
 	@PostMapping("/register")
 	public ResponseEntity<Map<String,Object>> registerCustomer(@Valid @RequestBody Customer customer){
+//		System.out.println("This is My PASSWORD ------>" + customer.getPassword());
 		
 		logger.info("Received request to register a new customer: {}", customer.getEmail());
 		
