@@ -28,6 +28,16 @@
 </head>
 <body>
 
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container-fluid container-xl">
+            <a class="navbar-brand fs-4 fw-bold text-primary" href="Home.html">LOMS Credit Portal</a>
+            <div class="d-flex align-items-center">
+                <span id="customer-info" class="text-secondary small"></span>
+            </div>
+        </div>
+    </nav>
+
     <div class="container my-5">
         <div class="card shadow-lg border-0 rounded-4">
             <div class="card-header card-header-custom rounded-top-4 p-4">
@@ -73,6 +83,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
     <script>
+        document.getElementById('customer-info').textContent = localStorage.getItem('customerName');
+
         const API_URL = 'http://localhost:8082/getCustomerLoans';
         const REPAYMENT_BASE_URL = 'http://localhost:8082/loan-repayment/'; 
         
