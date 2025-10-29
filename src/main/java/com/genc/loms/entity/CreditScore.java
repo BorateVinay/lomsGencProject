@@ -14,7 +14,7 @@ public class CreditScore {
     @Column(name = "score_id")
     private int scoreId;
 
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "customer_id", nullable = false)
     private Customer customer;
 
